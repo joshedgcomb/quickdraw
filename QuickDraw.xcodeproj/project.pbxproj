@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC7FDFC118BD13E200AA3CB5 /* highScores.sql in Resources */ = {isa = PBXBuildFile; fileRef = BC7FDFC018BD13E200AA3CB5 /* highScores.sql */; };
+		BC7FDFC418BD140B00AA3CB5 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7FDFC318BD140B00AA3CB5 /* Database.m */; };
+		BC7FDFC618BD144C00AA3CB5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */; };
+		BC7FDFC918BD165200AA3CB5 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7FDFC818BD165200AA3CB5 /* Score.m */; };
 		DA5F690E18BC4F820082AAA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690D18BC4F820082AAA3 /* UIKit.framework */; };
 		DA5F691018BC4F820082AAA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690F18BC4F820082AAA3 /* Foundation.framework */; };
 		DA5F691218BC4F820082AAA3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F691118BC4F820082AAA3 /* CoreGraphics.framework */; };
@@ -17,7 +21,7 @@
 		DA5F692218BC4F820082AAA3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F692118BC4F820082AAA3 /* Default@2x.png */; };
 		DA5F692418BC4F820082AAA3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F692318BC4F820082AAA3 /* Default-568h@2x.png */; };
 		DA5F692718BC4F820082AAA3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5F692518BC4F820082AAA3 /* MainStoryboard.storyboard */; };
-		DA5F692A18BC4F820082AAA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F692918BC4F820082AAA3 /* ViewController.m */; };
+		DA5F692A18BC4F820082AAA3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F692918BC4F820082AAA3 /* GameViewController.m */; };
 		DA5F693218BC4F820082AAA3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F693118BC4F820082AAA3 /* SenTestingKit.framework */; };
 		DA5F693318BC4F820082AAA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690D18BC4F820082AAA3 /* UIKit.framework */; };
 		DA5F693418BC4F820082AAA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690F18BC4F820082AAA3 /* Foundation.framework */; };
@@ -36,6 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC7FDFC018BD13E200AA3CB5 /* highScores.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = highScores.sql; sourceTree = "<group>"; };
+		BC7FDFC218BD140B00AA3CB5 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		BC7FDFC318BD140B00AA3CB5 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		BC7FDFC718BD165200AA3CB5 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		BC7FDFC818BD165200AA3CB5 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		DA5F690A18BC4F820082AAA3 /* QuickDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F690D18BC4F820082AAA3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DA5F690F18BC4F820082AAA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,8 +60,8 @@
 		DA5F692118BC4F820082AAA3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DA5F692318BC4F820082AAA3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DA5F692618BC4F820082AAA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		DA5F692818BC4F820082AAA3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DA5F692918BC4F820082AAA3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DA5F692818BC4F820082AAA3 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		DA5F692918BC4F820082AAA3 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		DA5F693018BC4F820082AAA3 /* QuickDrawTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickDrawTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F693118BC4F820082AAA3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DA5F693918BC4F820082AAA3 /* QuickDrawTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickDrawTests-Info.plist"; sourceTree = "<group>"; };
@@ -65,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7FDFC618BD144C00AA3CB5 /* libsqlite3.0.dylib in Frameworks */,
 				DA5F690E18BC4F820082AAA3 /* UIKit.framework in Frameworks */,
 				DA5F691018BC4F820082AAA3 /* Foundation.framework in Frameworks */,
 				DA5F691218BC4F820082AAA3 /* CoreGraphics.framework in Frameworks */,
@@ -106,6 +117,7 @@
 		DA5F690C18BC4F820082AAA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */,
 				DA5F690D18BC4F820082AAA3 /* UIKit.framework */,
 				DA5F690F18BC4F820082AAA3 /* Foundation.framework */,
 				DA5F691118BC4F820082AAA3 /* CoreGraphics.framework */,
@@ -120,8 +132,12 @@
 				DA5F691C18BC4F820082AAA3 /* AppDelegate.h */,
 				DA5F691D18BC4F820082AAA3 /* AppDelegate.m */,
 				DA5F692518BC4F820082AAA3 /* MainStoryboard.storyboard */,
-				DA5F692818BC4F820082AAA3 /* ViewController.h */,
-				DA5F692918BC4F820082AAA3 /* ViewController.m */,
+				DA5F692818BC4F820082AAA3 /* GameViewController.h */,
+				DA5F692918BC4F820082AAA3 /* GameViewController.m */,
+				BC7FDFC218BD140B00AA3CB5 /* Database.h */,
+				BC7FDFC318BD140B00AA3CB5 /* Database.m */,
+				BC7FDFC718BD165200AA3CB5 /* Score.h */,
+				BC7FDFC818BD165200AA3CB5 /* Score.m */,
 				DA5F691418BC4F820082AAA3 /* Supporting Files */,
 			);
 			path = QuickDraw;
@@ -130,6 +146,7 @@
 		DA5F691418BC4F820082AAA3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC7FDFC018BD13E200AA3CB5 /* highScores.sql */,
 				DA5F691518BC4F820082AAA3 /* QuickDraw-Info.plist */,
 				DA5F691618BC4F820082AAA3 /* InfoPlist.strings */,
 				DA5F691918BC4F820082AAA3 /* main.m */,
@@ -232,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5F691818BC4F820082AAA3 /* InfoPlist.strings in Resources */,
+				BC7FDFC118BD13E200AA3CB5 /* highScores.sql in Resources */,
 				DA5F692018BC4F820082AAA3 /* Default.png in Resources */,
 				DA5F692218BC4F820082AAA3 /* Default@2x.png in Resources */,
 				DA5F692418BC4F820082AAA3 /* Default-568h@2x.png in Resources */,
@@ -272,7 +290,9 @@
 			files = (
 				DA5F691A18BC4F820082AAA3 /* main.m in Sources */,
 				DA5F691E18BC4F820082AAA3 /* AppDelegate.m in Sources */,
-				DA5F692A18BC4F820082AAA3 /* ViewController.m in Sources */,
+				BC7FDFC918BD165200AA3CB5 /* Score.m in Sources */,
+				BC7FDFC418BD140B00AA3CB5 /* Database.m in Sources */,
+				DA5F692A18BC4F820082AAA3 /* GameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +475,7 @@
 				DA5F694418BC4F820082AAA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA5F694518BC4F820082AAA3 /* Build configuration list for PBXNativeTarget "QuickDrawTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +484,7 @@
 				DA5F694718BC4F820082AAA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
