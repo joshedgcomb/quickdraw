@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA5F690E18BC4F820082AAA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690D18BC4F820082AAA3 /* UIKit.framework */; };
+		DA5F691018BC4F820082AAA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690F18BC4F820082AAA3 /* Foundation.framework */; };
+		DA5F691218BC4F820082AAA3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F691118BC4F820082AAA3 /* CoreGraphics.framework */; };
+		DA5F691818BC4F820082AAA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5F691618BC4F820082AAA3 /* InfoPlist.strings */; };
+		DA5F691A18BC4F820082AAA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F691918BC4F820082AAA3 /* main.m */; };
+		DA5F691E18BC4F820082AAA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F691D18BC4F820082AAA3 /* AppDelegate.m */; };
+		DA5F692018BC4F820082AAA3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F691F18BC4F820082AAA3 /* Default.png */; };
+		DA5F692218BC4F820082AAA3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F692118BC4F820082AAA3 /* Default@2x.png */; };
+		DA5F692418BC4F820082AAA3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5F692318BC4F820082AAA3 /* Default-568h@2x.png */; };
+		DA5F692718BC4F820082AAA3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5F692518BC4F820082AAA3 /* MainStoryboard.storyboard */; };
+		DA5F692A18BC4F820082AAA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F692918BC4F820082AAA3 /* ViewController.m */; };
+		DA5F693218BC4F820082AAA3 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F693118BC4F820082AAA3 /* SenTestingKit.framework */; };
+		DA5F693318BC4F820082AAA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690D18BC4F820082AAA3 /* UIKit.framework */; };
+		DA5F693418BC4F820082AAA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690F18BC4F820082AAA3 /* Foundation.framework */; };
+		DA5F693C18BC4F820082AAA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5F693A18BC4F820082AAA3 /* InfoPlist.strings */; };
+		DA5F693F18BC4F820082AAA3 /* QuickDrawTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F693E18BC4F820082AAA3 /* QuickDrawTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DA5F693518BC4F820082AAA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA5F690218BC4F820082AAA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA5F690918BC4F820082AAA3;
+			remoteInfo = QuickDraw;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DA5F690A18BC4F820082AAA3 /* QuickDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5F690D18BC4F820082AAA3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DA5F690F18BC4F820082AAA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA5F691118BC4F820082AAA3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA5F691518BC4F820082AAA3 /* QuickDraw-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickDraw-Info.plist"; sourceTree = "<group>"; };
+		DA5F691718BC4F820082AAA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA5F691918BC4F820082AAA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DA5F691B18BC4F820082AAA3 /* QuickDraw-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QuickDraw-Prefix.pch"; sourceTree = "<group>"; };
+		DA5F691C18BC4F820082AAA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DA5F691D18BC4F820082AAA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DA5F691F18BC4F820082AAA3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DA5F692118BC4F820082AAA3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DA5F692318BC4F820082AAA3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DA5F692618BC4F820082AAA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DA5F692818BC4F820082AAA3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DA5F692918BC4F820082AAA3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DA5F693018BC4F820082AAA3 /* QuickDrawTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickDrawTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA5F693118BC4F820082AAA3 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DA5F693918BC4F820082AAA3 /* QuickDrawTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QuickDrawTests-Info.plist"; sourceTree = "<group>"; };
+		DA5F693B18BC4F820082AAA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA5F693D18BC4F820082AAA3 /* QuickDrawTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickDrawTests.h; sourceTree = "<group>"; };
+		DA5F693E18BC4F820082AAA3 /* QuickDrawTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickDrawTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA5F690718BC4F820082AAA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5F690E18BC4F820082AAA3 /* UIKit.framework in Frameworks */,
+				DA5F691018BC4F820082AAA3 /* Foundation.framework in Frameworks */,
+				DA5F691218BC4F820082AAA3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA5F692C18BC4F820082AAA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5F693218BC4F820082AAA3 /* SenTestingKit.framework in Frameworks */,
+				DA5F693318BC4F820082AAA3 /* UIKit.framework in Frameworks */,
+				DA5F693418BC4F820082AAA3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA5F690118BC4F820082AAA3 = {
+			isa = PBXGroup;
+			children = (
+				DA5F691318BC4F820082AAA3 /* QuickDraw */,
+				DA5F693718BC4F820082AAA3 /* QuickDrawTests */,
+				DA5F690C18BC4F820082AAA3 /* Frameworks */,
+				DA5F690B18BC4F820082AAA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA5F690B18BC4F820082AAA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F690A18BC4F820082AAA3 /* QuickDraw.app */,
+				DA5F693018BC4F820082AAA3 /* QuickDrawTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA5F690C18BC4F820082AAA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F690D18BC4F820082AAA3 /* UIKit.framework */,
+				DA5F690F18BC4F820082AAA3 /* Foundation.framework */,
+				DA5F691118BC4F820082AAA3 /* CoreGraphics.framework */,
+				DA5F693118BC4F820082AAA3 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA5F691318BC4F820082AAA3 /* QuickDraw */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F691C18BC4F820082AAA3 /* AppDelegate.h */,
+				DA5F691D18BC4F820082AAA3 /* AppDelegate.m */,
+				DA5F692518BC4F820082AAA3 /* MainStoryboard.storyboard */,
+				DA5F692818BC4F820082AAA3 /* ViewController.h */,
+				DA5F692918BC4F820082AAA3 /* ViewController.m */,
+				DA5F691418BC4F820082AAA3 /* Supporting Files */,
+			);
+			path = QuickDraw;
+			sourceTree = "<group>";
+		};
+		DA5F691418BC4F820082AAA3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F691518BC4F820082AAA3 /* QuickDraw-Info.plist */,
+				DA5F691618BC4F820082AAA3 /* InfoPlist.strings */,
+				DA5F691918BC4F820082AAA3 /* main.m */,
+				DA5F691B18BC4F820082AAA3 /* QuickDraw-Prefix.pch */,
+				DA5F691F18BC4F820082AAA3 /* Default.png */,
+				DA5F692118BC4F820082AAA3 /* Default@2x.png */,
+				DA5F692318BC4F820082AAA3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DA5F693718BC4F820082AAA3 /* QuickDrawTests */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F693D18BC4F820082AAA3 /* QuickDrawTests.h */,
+				DA5F693E18BC4F820082AAA3 /* QuickDrawTests.m */,
+				DA5F693818BC4F820082AAA3 /* Supporting Files */,
+			);
+			path = QuickDrawTests;
+			sourceTree = "<group>";
+		};
+		DA5F693818BC4F820082AAA3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F693918BC4F820082AAA3 /* QuickDrawTests-Info.plist */,
+				DA5F693A18BC4F820082AAA3 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA5F690918BC4F820082AAA3 /* QuickDraw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA5F694218BC4F820082AAA3 /* Build configuration list for PBXNativeTarget "QuickDraw" */;
+			buildPhases = (
+				DA5F690618BC4F820082AAA3 /* Sources */,
+				DA5F690718BC4F820082AAA3 /* Frameworks */,
+				DA5F690818BC4F820082AAA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickDraw;
+			productName = QuickDraw;
+			productReference = DA5F690A18BC4F820082AAA3 /* QuickDraw.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DA5F692F18BC4F820082AAA3 /* QuickDrawTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA5F694518BC4F820082AAA3 /* Build configuration list for PBXNativeTarget "QuickDrawTests" */;
+			buildPhases = (
+				DA5F692B18BC4F820082AAA3 /* Sources */,
+				DA5F692C18BC4F820082AAA3 /* Frameworks */,
+				DA5F692D18BC4F820082AAA3 /* Resources */,
+				DA5F692E18BC4F820082AAA3 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA5F693618BC4F820082AAA3 /* PBXTargetDependency */,
+			);
+			name = QuickDrawTests;
+			productName = QuickDrawTests;
+			productReference = DA5F693018BC4F820082AAA3 /* QuickDrawTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA5F690218BC4F820082AAA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = jverticchio;
+			};
+			buildConfigurationList = DA5F690518BC4F820082AAA3 /* Build configuration list for PBXProject "QuickDraw" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DA5F690118BC4F820082AAA3;
+			productRefGroup = DA5F690B18BC4F820082AAA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA5F690918BC4F820082AAA3 /* QuickDraw */,
+				DA5F692F18BC4F820082AAA3 /* QuickDrawTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA5F690818BC4F820082AAA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5F691818BC4F820082AAA3 /* InfoPlist.strings in Resources */,
+				DA5F692018BC4F820082AAA3 /* Default.png in Resources */,
+				DA5F692218BC4F820082AAA3 /* Default@2x.png in Resources */,
+				DA5F692418BC4F820082AAA3 /* Default-568h@2x.png in Resources */,
+				DA5F692718BC4F820082AAA3 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA5F692D18BC4F820082AAA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5F693C18BC4F820082AAA3 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA5F692E18BC4F820082AAA3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA5F690618BC4F820082AAA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5F691A18BC4F820082AAA3 /* main.m in Sources */,
+				DA5F691E18BC4F820082AAA3 /* AppDelegate.m in Sources */,
+				DA5F692A18BC4F820082AAA3 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA5F692B18BC4F820082AAA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5F693F18BC4F820082AAA3 /* QuickDrawTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DA5F693618BC4F820082AAA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA5F690918BC4F820082AAA3 /* QuickDraw */;
+			targetProxy = DA5F693518BC4F820082AAA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DA5F691618BC4F820082AAA3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA5F691718BC4F820082AAA3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DA5F692518BC4F820082AAA3 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA5F692618BC4F820082AAA3 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		DA5F693A18BC4F820082AAA3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA5F693B18BC4F820082AAA3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA5F694018BC4F820082AAA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		DA5F694118BC4F820082AAA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA5F694318BC4F820082AAA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuickDraw/QuickDraw-Prefix.pch";
+				INFOPLIST_FILE = "QuickDraw/QuickDraw-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DA5F694418BC4F820082AAA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuickDraw/QuickDraw-Prefix.pch";
+				INFOPLIST_FILE = "QuickDraw/QuickDraw-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DA5F694618BC4F820082AAA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QuickDraw.app/QuickDraw";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuickDraw/QuickDraw-Prefix.pch";
+				INFOPLIST_FILE = "QuickDrawTests/QuickDrawTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DA5F694718BC4F820082AAA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QuickDraw.app/QuickDraw";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QuickDraw/QuickDraw-Prefix.pch";
+				INFOPLIST_FILE = "QuickDrawTests/QuickDrawTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA5F690518BC4F820082AAA3 /* Build configuration list for PBXProject "QuickDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA5F694018BC4F820082AAA3 /* Debug */,
+				DA5F694118BC4F820082AAA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA5F694218BC4F820082AAA3 /* Build configuration list for PBXNativeTarget "QuickDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA5F694318BC4F820082AAA3 /* Debug */,
+				DA5F694418BC4F820082AAA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DA5F694518BC4F820082AAA3 /* Build configuration list for PBXNativeTarget "QuickDrawTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA5F694618BC4F820082AAA3 /* Debug */,
+				DA5F694718BC4F820082AAA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA5F690218BC4F820082AAA3 /* Project object */;
+}
