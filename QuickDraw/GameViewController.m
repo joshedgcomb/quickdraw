@@ -97,7 +97,9 @@
     NSNumber *score = [NSNumber numberWithInt:num];
     NSString *name = [NSString stringWithFormat:@"John"];
     
+    
     NSData *img = [NSData dataWithData:UIImagePNGRepresentation(self->mainImage.image)];
+    
     
     [Database saveDrawingWithImage:img];
     NSMutableArray *drawings = [Database fetchAllDrawings];
@@ -111,21 +113,7 @@
     highScore[@"score"] = score;
     [highScore saveInBackground];
     
-    PFQuery *query = [[PFQuery alloc] initWithClassName:@"NewScore"];
-    query.limit = 10;
-    [query orderByDescending:@"score"];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            NSLog(@"Successfully retrieved %d scores.", objects.count);
-            for (PFObject *object in objects) {
-                NSLog(@"from Parse: %@", object);
-            }
-        }
-        else {
-            NSLog(@"Error: %@", error);
-        }
-    }];
+
 }
 
 

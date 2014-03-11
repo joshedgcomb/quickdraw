@@ -10,9 +10,12 @@
 
 @implementation HighScoresFromParseViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+
+// Changed from initWithStyle, since when using storyboards, initWithCoder
+// is called instead of initWithStyle.
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithStyle:style];
+    self = [super initWithCoder:aDecoder];
     if (self) {
         // Custom the table
         
@@ -26,13 +29,13 @@
         //self.title = @"High Scores";
         
         // Whether the built-in pull-to-refresh is enabled
-        self.pullToRefreshEnabled = NO;
+        self.pullToRefreshEnabled = YES;
         
         // Whether the built-in pagination is enabled
-        self.paginationEnabled = NO;
+        self.paginationEnabled = YES;
         
         // The number of objects to show per page
-        self.objectsPerPage = 2;
+        self.objectsPerPage = 10;
     }
     return self;
 }
@@ -110,13 +113,12 @@
 // all objects ordered by createdAt descending.
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:@"NewScore"];
-    query.limit = 10;
     
     // If no objects are loaded in memory, we look to the cache first to fill the table
     // and then subsequently do a query against the network.
-//    if ([self.objects count] == 0) {
-  //      query.cachePolicy = kPFCachePolicyCacheThenNetwork;
-    //}
+    if ([self.objects count] == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+    }
 
     [query orderByDescending:@"score"];
     
