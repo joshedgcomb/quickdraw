@@ -91,11 +91,43 @@
     
 }
 
-- (IBAction)done:(id)sender {
+//- (IBAction)done:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     int num = arc4random() % 100;
-    NSString *score = [NSString stringWithFormat:@"%d", num];
+    NSNumber *score = [NSNumber numberWithInt:num];
     NSString *name = [NSString stringWithFormat:@"John"];
-    NSLog(@"Score: %@",score);
-    //[Database saveScoreWithName:name andScore:score];
+    
+    NSData *img = [NSData dataWithData:UIImagePNGRepresentation(self->mainImage.image)];
+    
+    [Database saveDrawingWithImage:img];
+    NSMutableArray *drawings = [Database fetchAllDrawings];
+    for (Drawing *temp in drawings){
+      //  NSLog(@"From DB: %d", temp.rowid);
+    }
+
+    
+    PFObject *highScore = [PFObject objectWithClassName:@"NewScore"];
+    highScore[@"name"] = name;
+    highScore[@"score"] = score;
+    [highScore saveInBackground];
+    
+    PFQuery *query = [[PFQuery alloc] initWithClassName:@"NewScore"];
+    query.limit = 10;
+    [query orderByDescending:@"score"];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            for (PFObject *object in objects) {
+                NSLog(@"from Parse: %@", object);
+            }
+        }
+        else {
+            NSLog(@"Error: %@", error);
+        }
+    }];
 }
+
+
+
 @end

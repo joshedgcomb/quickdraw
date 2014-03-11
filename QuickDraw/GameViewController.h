@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 #import "Database.h"
 
 @interface GameViewController : UIViewController{
@@ -22,5 +23,6 @@ CGFloat blue;
 CGFloat brush;
 CGFloat opacity;
 BOOL mouseSwiped;
+}
 
-} @end
+@end

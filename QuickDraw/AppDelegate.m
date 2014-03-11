@@ -12,6 +12,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Database createEditableCopyOfDatabaseIfNeeded];
+    [Database initDatabase];
+    [Parse setApplicationId:@"SWxxDoHsytkQF2dyuxJFpvjizxB4prBUtNqw5C6S"
+                  clientKey:@"tpzjoZ2xEujF2LdWQx41yJGQY4Yff0uggnIspc0Q"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+
     // Override point for customization after application launch.
     return YES;
 }

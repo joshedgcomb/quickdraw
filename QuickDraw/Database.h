@@ -8,15 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
-#import "Score.h"
+#import "Drawing.h"
 
 @interface Database : NSObject
 
 + (void)createEditableCopyOfDatabaseIfNeeded;
 + (void)initDatabase;
-+ (NSMutableArray *)fetchAllScores;
-+ (void)saveScoreWithName:(NSString *)name andScore:(NSString *)score;
-+ (void)deleteScore:(int)rowid;
+
++ (NSMutableArray *)fetchAllDrawings;
++ (void)saveDrawingWithImage:(NSData *) imgData;
++ (void)deleteDrawing:(int)rowid;
+
 + (void)cleanUpDatabaseForQuit;
 
 @end

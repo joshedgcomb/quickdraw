@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC7FDFC118BD13E200AA3CB5 /* highScores.sql in Resources */ = {isa = PBXBuildFile; fileRef = BC7FDFC018BD13E200AA3CB5 /* highScores.sql */; };
 		BC7FDFC418BD140B00AA3CB5 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7FDFC318BD140B00AA3CB5 /* Database.m */; };
 		BC7FDFC618BD144C00AA3CB5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */; };
-		BC7FDFC918BD165200AA3CB5 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7FDFC818BD165200AA3CB5 /* Score.m */; };
+		DA48D0CA18BFE4B5005D8A1A /* Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DA48D0C918BFE4B5005D8A1A /* Drawing.m */; };
+		DA48D0CE18C13A64005D8A1A /* Database.sql in Resources */ = {isa = PBXBuildFile; fileRef = DA48D0CD18C13A64005D8A1A /* Database.sql */; };
+		DA48D0D618C3FB19005D8A1A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0D518C3FB19005D8A1A /* Parse.framework */; };
+		DA48D0D818C3FB5A005D8A1A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0D718C3FB5A005D8A1A /* AudioToolbox.framework */; };
+		DA48D0DA18C3FB66005D8A1A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0D918C3FB66005D8A1A /* CFNetwork.framework */; };
+		DA48D0DC18C3FB7B005D8A1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0DB18C3FB7B005D8A1A /* CoreLocation.framework */; };
+		DA48D0DE18C3FB88005D8A1A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0DD18C3FB88005D8A1A /* libz.dylib */; };
+		DA48D0E018C3FB92005D8A1A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0DF18C3FB92005D8A1A /* MobileCoreServices.framework */; };
+		DA48D0E218C3FB9C005D8A1A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0E118C3FB9C005D8A1A /* QuartzCore.framework */; };
+		DA48D0E418C3FBA3005D8A1A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0E318C3FBA3005D8A1A /* Security.framework */; };
+		DA48D0E618C3FBAB005D8A1A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0E518C3FBAB005D8A1A /* StoreKit.framework */; };
+		DA48D0E818C3FBB7005D8A1A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0E718C3FBB7005D8A1A /* SystemConfiguration.framework */; };
+		DA48D13B18C6451A005D8A1A /* HighScoresFromParseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA48D13A18C6451A005D8A1A /* HighScoresFromParseViewController.m */; };
 		DA5F690E18BC4F820082AAA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690D18BC4F820082AAA3 /* UIKit.framework */; };
 		DA5F691018BC4F820082AAA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690F18BC4F820082AAA3 /* Foundation.framework */; };
 		DA5F691218BC4F820082AAA3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F691118BC4F820082AAA3 /* CoreGraphics.framework */; };
@@ -40,12 +51,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BC7FDFC018BD13E200AA3CB5 /* highScores.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = highScores.sql; sourceTree = "<group>"; };
 		BC7FDFC218BD140B00AA3CB5 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		BC7FDFC318BD140B00AA3CB5 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		BC7FDFC718BD165200AA3CB5 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
-		BC7FDFC818BD165200AA3CB5 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		DA48D0C818BFE4B5005D8A1A /* Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawing.h; sourceTree = "<group>"; };
+		DA48D0C918BFE4B5005D8A1A /* Drawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drawing.m; sourceTree = "<group>"; };
+		DA48D0CD18C13A64005D8A1A /* Database.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Database.sql; sourceTree = "<group>"; };
+		DA48D0D518C3FB19005D8A1A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		DA48D0D718C3FB5A005D8A1A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DA48D0D918C3FB66005D8A1A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		DA48D0DB18C3FB7B005D8A1A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DA48D0DD18C3FB88005D8A1A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		DA48D0DF18C3FB92005D8A1A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DA48D0E118C3FB9C005D8A1A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DA48D0E318C3FBA3005D8A1A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DA48D0E518C3FBAB005D8A1A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DA48D0E718C3FBB7005D8A1A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DA48D13918C6451A005D8A1A /* HighScoresFromParseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoresFromParseViewController.h; sourceTree = "<group>"; };
+		DA48D13A18C6451A005D8A1A /* HighScoresFromParseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoresFromParseViewController.m; sourceTree = "<group>"; };
 		DA5F690A18BC4F820082AAA3 /* QuickDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F690D18BC4F820082AAA3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DA5F690F18BC4F820082AAA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -75,10 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA48D0E818C3FBB7005D8A1A /* SystemConfiguration.framework in Frameworks */,
+				DA48D0E618C3FBAB005D8A1A /* StoreKit.framework in Frameworks */,
+				DA48D0E418C3FBA3005D8A1A /* Security.framework in Frameworks */,
+				DA48D0E218C3FB9C005D8A1A /* QuartzCore.framework in Frameworks */,
+				DA48D0E018C3FB92005D8A1A /* MobileCoreServices.framework in Frameworks */,
+				DA48D0DE18C3FB88005D8A1A /* libz.dylib in Frameworks */,
+				DA48D0DC18C3FB7B005D8A1A /* CoreLocation.framework in Frameworks */,
+				DA5F691218BC4F820082AAA3 /* CoreGraphics.framework in Frameworks */,
+				DA48D0DA18C3FB66005D8A1A /* CFNetwork.framework in Frameworks */,
+				DA48D0D818C3FB5A005D8A1A /* AudioToolbox.framework in Frameworks */,
 				BC7FDFC618BD144C00AA3CB5 /* libsqlite3.0.dylib in Frameworks */,
 				DA5F690E18BC4F820082AAA3 /* UIKit.framework in Frameworks */,
 				DA5F691018BC4F820082AAA3 /* Foundation.framework in Frameworks */,
-				DA5F691218BC4F820082AAA3 /* CoreGraphics.framework in Frameworks */,
+				DA48D0D618C3FB19005D8A1A /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +150,16 @@
 		DA5F690C18BC4F820082AAA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA48D0E718C3FBB7005D8A1A /* SystemConfiguration.framework */,
+				DA48D0E518C3FBAB005D8A1A /* StoreKit.framework */,
+				DA48D0E318C3FBA3005D8A1A /* Security.framework */,
+				DA48D0E118C3FB9C005D8A1A /* QuartzCore.framework */,
+				DA48D0DF18C3FB92005D8A1A /* MobileCoreServices.framework */,
+				DA48D0DD18C3FB88005D8A1A /* libz.dylib */,
+				DA48D0DB18C3FB7B005D8A1A /* CoreLocation.framework */,
+				DA48D0D918C3FB66005D8A1A /* CFNetwork.framework */,
+				DA48D0D718C3FB5A005D8A1A /* AudioToolbox.framework */,
+				DA48D0D518C3FB19005D8A1A /* Parse.framework */,
 				BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */,
 				DA5F690D18BC4F820082AAA3 /* UIKit.framework */,
 				DA5F690F18BC4F820082AAA3 /* Foundation.framework */,
@@ -134,10 +177,12 @@
 				DA5F692518BC4F820082AAA3 /* MainStoryboard.storyboard */,
 				DA5F692818BC4F820082AAA3 /* GameViewController.h */,
 				DA5F692918BC4F820082AAA3 /* GameViewController.m */,
+				DA48D13918C6451A005D8A1A /* HighScoresFromParseViewController.h */,
+				DA48D13A18C6451A005D8A1A /* HighScoresFromParseViewController.m */,
 				BC7FDFC218BD140B00AA3CB5 /* Database.h */,
 				BC7FDFC318BD140B00AA3CB5 /* Database.m */,
-				BC7FDFC718BD165200AA3CB5 /* Score.h */,
-				BC7FDFC818BD165200AA3CB5 /* Score.m */,
+				DA48D0C818BFE4B5005D8A1A /* Drawing.h */,
+				DA48D0C918BFE4B5005D8A1A /* Drawing.m */,
 				DA5F691418BC4F820082AAA3 /* Supporting Files */,
 			);
 			path = QuickDraw;
@@ -146,7 +191,7 @@
 		DA5F691418BC4F820082AAA3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				BC7FDFC018BD13E200AA3CB5 /* highScores.sql */,
+				DA48D0CD18C13A64005D8A1A /* Database.sql */,
 				DA5F691518BC4F820082AAA3 /* QuickDraw-Info.plist */,
 				DA5F691618BC4F820082AAA3 /* InfoPlist.strings */,
 				DA5F691918BC4F820082AAA3 /* main.m */,
@@ -249,11 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5F691818BC4F820082AAA3 /* InfoPlist.strings in Resources */,
-				BC7FDFC118BD13E200AA3CB5 /* highScores.sql in Resources */,
 				DA5F692018BC4F820082AAA3 /* Default.png in Resources */,
 				DA5F692218BC4F820082AAA3 /* Default@2x.png in Resources */,
 				DA5F692418BC4F820082AAA3 /* Default-568h@2x.png in Resources */,
 				DA5F692718BC4F820082AAA3 /* MainStoryboard.storyboard in Resources */,
+				DA48D0CE18C13A64005D8A1A /* Database.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +335,8 @@
 			files = (
 				DA5F691A18BC4F820082AAA3 /* main.m in Sources */,
 				DA5F691E18BC4F820082AAA3 /* AppDelegate.m in Sources */,
-				BC7FDFC918BD165200AA3CB5 /* Score.m in Sources */,
+				DA48D13B18C6451A005D8A1A /* HighScoresFromParseViewController.m in Sources */,
+				DA48D0CA18BFE4B5005D8A1A /* Drawing.m in Sources */,
 				BC7FDFC418BD140B00AA3CB5 /* Database.m in Sources */,
 				DA5F692A18BC4F820082AAA3 /* GameViewController.m in Sources */,
 			);
@@ -403,6 +449,10 @@
 		DA5F694318BC4F820082AAA3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jarthurcs/Desktop/QuickDraw/QuickDraw,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickDraw/QuickDraw-Prefix.pch";
 				INFOPLIST_FILE = "QuickDraw/QuickDraw-Info.plist";
@@ -414,6 +464,10 @@
 		DA5F694418BC4F820082AAA3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jarthurcs/Desktop/QuickDraw/QuickDraw,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickDraw/QuickDraw-Prefix.pch";
 				INFOPLIST_FILE = "QuickDraw/QuickDraw-Info.plist";
