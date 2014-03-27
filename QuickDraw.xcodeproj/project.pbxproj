@@ -82,7 +82,7 @@
 		DA5F691F18BC4F820082AAA3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DA5F692118BC4F820082AAA3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DA5F692318BC4F820082AAA3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		DA5F692618BC4F820082AAA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DA5F692618BC4F820082AAA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DA5F692818BC4F820082AAA3 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		DA5F692918BC4F820082AAA3 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		DA5F693018BC4F820082AAA3 /* QuickDrawTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickDrawTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -451,7 +451,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jarthurcs/Desktop/QuickDraw/QuickDraw,
+					Users/XinleiXu/Desktop/Zimmer/QuickDraw/QuickDraw,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickDraw/QuickDraw-Prefix.pch";
@@ -466,7 +466,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/jarthurcs/Desktop/QuickDraw/QuickDraw,
+					Users/XinleiXu/Desktop/Zimmer/QuickDraw/QuickDraw,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "QuickDraw/QuickDraw-Prefix.pch";
