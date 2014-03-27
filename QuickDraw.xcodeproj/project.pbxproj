@@ -12,7 +12,6 @@
 		BC7FDFC618BD144C00AA3CB5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */; };
 		DA48D0CA18BFE4B5005D8A1A /* Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DA48D0C918BFE4B5005D8A1A /* Drawing.m */; };
 		DA48D0CE18C13A64005D8A1A /* Database.sql in Resources */ = {isa = PBXBuildFile; fileRef = DA48D0CD18C13A64005D8A1A /* Database.sql */; };
-		DA48D0D618C3FB19005D8A1A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0D518C3FB19005D8A1A /* Parse.framework */; };
 		DA48D0D818C3FB5A005D8A1A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0D718C3FB5A005D8A1A /* AudioToolbox.framework */; };
 		DA48D0DA18C3FB66005D8A1A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0D918C3FB66005D8A1A /* CFNetwork.framework */; };
 		DA48D0DC18C3FB7B005D8A1A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0DB18C3FB7B005D8A1A /* CoreLocation.framework */; };
@@ -89,7 +88,6 @@
 		DA48D0C818BFE4B5005D8A1A /* Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawing.h; sourceTree = "<group>"; };
 		DA48D0C918BFE4B5005D8A1A /* Drawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drawing.m; sourceTree = "<group>"; };
 		DA48D0CD18C13A64005D8A1A /* Database.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Database.sql; sourceTree = "<group>"; };
-		DA48D0D518C3FB19005D8A1A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		DA48D0D718C3FB5A005D8A1A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DA48D0D918C3FB66005D8A1A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		DA48D0DB18C3FB7B005D8A1A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -130,7 +128,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA48D0D618C3FB19005D8A1A /* Parse.framework in Frameworks */,
 				DA48D0E818C3FBB7005D8A1A /* SystemConfiguration.framework in Frameworks */,
 				DA48D0E618C3FBAB005D8A1A /* StoreKit.framework in Frameworks */,
 				DA48D0E418C3FBA3005D8A1A /* Security.framework in Frameworks */,
@@ -183,7 +180,6 @@
 		DA5F690C18BC4F820082AAA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA48D0D518C3FB19005D8A1A /* Parse.framework */,
 				92F2E19918E433A300DF9F0F /* Parse.framework */,
 				DA48D0E718C3FBB7005D8A1A /* SystemConfiguration.framework */,
 				DA48D0E518C3FBAB005D8A1A /* StoreKit.framework */,

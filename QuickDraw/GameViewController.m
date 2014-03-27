@@ -102,10 +102,11 @@
     
     
     [Database saveDrawingWithImage:img];
-    NSMutableArray *drawings = [Database fetchAllDrawings];
-    for (Drawing *temp in drawings){
+    //Do something here with the drawings
+    //NSMutableArray *drawings = [Database fetchAllDrawings];
+    /*for (Drawing *temp in drawings){
       //  NSLog(@"From DB: %d", temp.rowid);
-    }
+    }*/ //Suspected debugging code
 
     
     PFObject *highScore = [PFObject objectWithClassName:@"NewScore"];
