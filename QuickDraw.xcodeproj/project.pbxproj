@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		92F2E19A18E433A300DF9F0F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F2E19918E433A300DF9F0F /* Parse.framework */; };
+		92F2E19D18E446DB00DF9F0F /* SmoothLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F2E19C18E446DB00DF9F0F /* SmoothLineView.m */; };
+		92F2E1A118E44B3E00DF9F0F /* Smooth_Line_ViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F2E19F18E44B3E00DF9F0F /* Smooth_Line_ViewViewController.m */; };
+		92F2E1A218E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F2E1A018E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib */; };
 		BC7FDFC418BD140B00AA3CB5 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7FDFC318BD140B00AA3CB5 /* Database.m */; };
 		BC7FDFC618BD144C00AA3CB5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */; };
 		DA48D0CA18BFE4B5005D8A1A /* Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DA48D0C918BFE4B5005D8A1A /* Drawing.m */; };
@@ -82,6 +85,11 @@
 
 /* Begin PBXFileReference section */
 		92F2E19918E433A300DF9F0F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = QuickDraw/Parse.framework; sourceTree = "<group>"; };
+		92F2E19B18E446DB00DF9F0F /* SmoothLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmoothLineView.h; sourceTree = "<group>"; };
+		92F2E19C18E446DB00DF9F0F /* SmoothLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmoothLineView.m; sourceTree = "<group>"; };
+		92F2E19E18E44B2600DF9F0F /* Smooth_Line_ViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Smooth_Line_ViewViewController.h; sourceTree = "<group>"; };
+		92F2E19F18E44B3E00DF9F0F /* Smooth_Line_ViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Smooth_Line_ViewViewController.m; sourceTree = "<group>"; };
+		92F2E1A018E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Smooth_Line_ViewViewController.xib; sourceTree = "<group>"; };
 		BC7FDFC218BD140B00AA3CB5 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		BC7FDFC318BD140B00AA3CB5 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -112,7 +120,7 @@
 		DA5F691F18BC4F820082AAA3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DA5F692118BC4F820082AAA3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DA5F692318BC4F820082AAA3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		DA5F692618BC4F820082AAA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		DA5F692618BC4F820082AAA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		DA5F692818BC4F820082AAA3 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		DA5F692918BC4F820082AAA3 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		DA5F693018BC4F820082AAA3 /* QuickDrawTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickDrawTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,12 +215,17 @@
 				DA5F692518BC4F820082AAA3 /* MainStoryboard.storyboard */,
 				DA5F692818BC4F820082AAA3 /* GameViewController.h */,
 				DA5F692918BC4F820082AAA3 /* GameViewController.m */,
+				92F2E19F18E44B3E00DF9F0F /* Smooth_Line_ViewViewController.m */,
+				92F2E1A018E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib */,
+				92F2E19E18E44B2600DF9F0F /* Smooth_Line_ViewViewController.h */,
 				DA48D13918C6451A005D8A1A /* HighScoresFromParseViewController.h */,
 				DA48D13A18C6451A005D8A1A /* HighScoresFromParseViewController.m */,
 				BC7FDFC218BD140B00AA3CB5 /* Database.h */,
 				BC7FDFC318BD140B00AA3CB5 /* Database.m */,
 				DA48D0C818BFE4B5005D8A1A /* Drawing.h */,
 				DA48D0C918BFE4B5005D8A1A /* Drawing.m */,
+				92F2E19B18E446DB00DF9F0F /* SmoothLineView.h */,
+				92F2E19C18E446DB00DF9F0F /* SmoothLineView.m */,
 				DA5F691418BC4F820082AAA3 /* Supporting Files */,
 			);
 			path = QuickDraw;
@@ -332,6 +345,7 @@
 				DA5F692218BC4F820082AAA3 /* Default@2x.png in Resources */,
 				DA5F692418BC4F820082AAA3 /* Default-568h@2x.png in Resources */,
 				DA5F692718BC4F820082AAA3 /* MainStoryboard.storyboard in Resources */,
+				92F2E1A218E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib in Resources */,
 				DA48D0CE18C13A64005D8A1A /* Database.sql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +383,8 @@
 			files = (
 				DA5F691A18BC4F820082AAA3 /* main.m in Sources */,
 				DA5F691E18BC4F820082AAA3 /* AppDelegate.m in Sources */,
+				92F2E1A118E44B3E00DF9F0F /* Smooth_Line_ViewViewController.m in Sources */,
+				92F2E19D18E446DB00DF9F0F /* SmoothLineView.m in Sources */,
 				DA48D13B18C6451A005D8A1A /* HighScoresFromParseViewController.m in Sources */,
 				DA48D0CA18BFE4B5005D8A1A /* Drawing.m in Sources */,
 				BC7FDFC418BD140B00AA3CB5 /* Database.m in Sources */,
