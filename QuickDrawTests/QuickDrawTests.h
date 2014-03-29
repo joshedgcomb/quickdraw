@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 jverticchio. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface QuickDrawTests : SenTestCase
+@interface QuickDrawTests : XCTestCase
 
 @end

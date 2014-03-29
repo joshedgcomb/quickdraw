@@ -71,11 +71,21 @@
                                     <action selector="reset:" destination="Ap9-eC-mWu" eventType="touchUpInside" id="C1G-Qp-EUV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UAK-Dz-uyQ">
+                                <rect key="frame" x="546" y="65" width="175" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Replay">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="replay:" destination="Ap9-eC-mWu" eventType="touchUpInside" id="3U1-5d-KdN"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="E90-LW-YxX" userLabel="tempDrawImage">
                                 <rect key="frame" x="0.0" y="0.0" width="767" height="931"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="cIc-3v-Xuf" userLabel="mainImage">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="945"/>
+                                <rect key="frame" x="5" y="0.0" width="768" height="945"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

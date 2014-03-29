@@ -27,6 +27,10 @@
 @property (nonatomic, retain) CALayer *penLayer;
 //end of added stuff
 
+
+- (IBAction)replay:(id)sender;
+
+
 @end
 
 @implementation GameViewController
@@ -41,7 +45,7 @@
     
     //Smoothline View
     //SmoothLineView * smoothLineView =[[SmoothLineView alloc] initWithFrame:self.view.frame ];
-    CGRect  viewRect = CGRectMake(100, 100, 500, 500);
+    CGRect  viewRect = CGRectMake(0, 150, 770, 800);
     SmoothLineView * smoothLineView =[[SmoothLineView alloc] initWithFrame:viewRect ];
     smoothLineView.backgroundColor = [UIColor colorWithWhite:0.8000 alpha:0.2];
     smoothLineView.tag = 3;
@@ -62,16 +66,11 @@
 
 }
 /* Button action for clear & replay */
-- (IBAction)clearAndReplay:(UIButton *)sender {
+- (IBAction)replay:(UIButton *)sender {
     //clear
-    for (UIView *subView in self.view.subviews)
-    {
-        if (subView.tag == 3)
-        {
-            [subView removeFromSuperview];
-        }
-    }
+    [self.canvas clear];
     //replay
+    [self startAnimation];
     [self viewDidLoad];
 }
 /* Animation things */
@@ -269,5 +268,7 @@
 }
 
 
-
+/*
+- (IBAction)replay:(id)sender {
+}*/
 @end
