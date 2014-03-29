@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		92F2E19A18E433A300DF9F0F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F2E19918E433A300DF9F0F /* Parse.framework */; };
 		92F2E19D18E446DB00DF9F0F /* SmoothLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F2E19C18E446DB00DF9F0F /* SmoothLineView.m */; };
-		92F2E1A118E44B3E00DF9F0F /* Smooth_Line_ViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F2E19F18E44B3E00DF9F0F /* Smooth_Line_ViewViewController.m */; };
 		92F2E1A218E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F2E1A018E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib */; };
 		BC7FDFC418BD140B00AA3CB5 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7FDFC318BD140B00AA3CB5 /* Database.m */; };
 		BC7FDFC618BD144C00AA3CB5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */; };
@@ -383,7 +382,6 @@
 			files = (
 				DA5F691A18BC4F820082AAA3 /* main.m in Sources */,
 				DA5F691E18BC4F820082AAA3 /* AppDelegate.m in Sources */,
-				92F2E1A118E44B3E00DF9F0F /* Smooth_Line_ViewViewController.m in Sources */,
 				92F2E19D18E446DB00DF9F0F /* SmoothLineView.m in Sources */,
 				DA48D13B18C6451A005D8A1A /* HighScoresFromParseViewController.m in Sources */,
 				DA48D0CA18BFE4B5005D8A1A /* Drawing.m in Sources */,

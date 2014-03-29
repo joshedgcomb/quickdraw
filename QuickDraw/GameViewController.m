@@ -39,24 +39,26 @@
     brush = 10.0;
     opacity = 1.0;
     
-    [super viewDidLoad];
-    
     //Smoothline View
-    SmoothLineView * smoothLineView =[[SmoothLineView alloc] initWithFrame:self.view.frame ];
-    //SmoothLineView * smoothLineView =[[SmoothLineView alloc] initWithFrame:self.view.bounds ];
-    self.canvas = smoothLineView;
+    //SmoothLineView * smoothLineView =[[SmoothLineView alloc] initWithFrame:self.view.frame ];
+    CGRect  viewRect = CGRectMake(100, 100, 500, 500);
+    SmoothLineView * smoothLineView =[[SmoothLineView alloc] initWithFrame:viewRect ];
+    smoothLineView.backgroundColor = [UIColor colorWithWhite:0.8000 alpha:0.2];
     smoothLineView.tag = 3;
+    self.canvas = smoothLineView;
     [self.view addSubview:smoothLineView];
     // [self.storedPath addObject:[SmoothLineView copyLineView:smoothLineView]];
     
     //[smoothLineView storePath:(id)self.storedPath];
-    
+   /*
     self.animationLayer = [CALayer layer];
     self.animationLayer.frame = CGRectMake(20.0f, 64.0f,
                                            CGRectGetWidth(self.view.layer.bounds) - 40.0f,
                                            CGRectGetHeight(self.view.layer.bounds) - 84.0f);
     [self.view addSubview:self.clearAndReplay];
     //[self.view addSubview:self.clearEverything];
+    */
+    [super viewDidLoad];
 
 }
 /* Button action for clear & replay */
