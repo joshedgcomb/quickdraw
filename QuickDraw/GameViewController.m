@@ -16,8 +16,6 @@
 //From original smoothlineviewvc
 @property (nonatomic) SmoothLineView * canvas;
 @property (atomic) NSMutableArray *storedPath;
-@property (strong, nonatomic) IBOutlet UIButton *clearAndReplay;
-//@property (unsafe_unretained, nonatomic) IBOutlet UIButton *clearEverything;
 
 
 //Added stuff below:
@@ -44,32 +42,34 @@
     opacity = 1.0;
     
     //Smoothline View
+    
     //SmoothLineView * smoothLineView =[[SmoothLineView alloc] initWithFrame:self.view.frame ];
     CGRect  viewRect = CGRectMake(0, 150, 770, 800);
-    SmoothLineView * smoothLineView =[[SmoothLineView alloc] initWithFrame:viewRect ];
-    smoothLineView.backgroundColor = [UIColor colorWithWhite:0.8000 alpha:0.2];
+    SmoothLineView * smoothLineView =[[SmoothLineView alloc] initWithFrame:viewRect];
+    smoothLineView.backgroundColor = [UIColor colorWithWhite:1.000 alpha:0.0];
     smoothLineView.tag = 3;
     self.canvas = smoothLineView;
-    [self.view addSubview:smoothLineView];
+    
     // [self.storedPath addObject:[SmoothLineView copyLineView:smoothLineView]];
     
     //[smoothLineView storePath:(id)self.storedPath];
-   /*
-    self.animationLayer = [CALayer layer];
-    self.animationLayer.frame = CGRectMake(20.0f, 64.0f,
-                                           CGRectGetWidth(self.view.layer.bounds) - 40.0f,
-                                           CGRectGetHeight(self.view.layer.bounds) - 84.0f);
-    [self.view addSubview:self.clearAndReplay];
-    //[self.view addSubview:self.clearEverything];
-    */
+
+    [self.view addSubview:smoothLineView];
     [super viewDidLoad];
 
 }
 /* Button action for clear & replay */
 - (IBAction)replay:(UIButton *)sender {
+    [UIView animateWithDuration:0.75 animations:^{self.canvas.alpha = 0.0;}];
     //clear
-    [self.canvas clear];
+    //[self.canvas clear];
     //replay
+    [UIView animateWithDuration:0.75 animations:^{self.canvas.alpha = 1.0;}];
+    [self setupDrawingLayer];
+    self.animationLayer = [CALayer layer];
+    self.animationLayer.frame = CGRectMake(20.0f, 64.0f,
+                                           CGRectGetWidth(self.view.layer.bounds) - 40.0f,
+                                           CGRectGetHeight(self.view.layer.bounds) - 84.0f);
     [self startAnimation];
     [self viewDidLoad];
 }
@@ -174,54 +174,7 @@
     UITouch *touch = [touches anyObject];
     lastPoint = [touch locationInView:self.view];
 }
-/*
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    mouseSwiped = YES;
-    UITouch *touch = [touches anyObject];
-    CGPoint currentPoint = [touch locationInView:self.view];
-    
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [self->tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-    CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), currentPoint.x, currentPoint.y);
-    CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-    CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush );
-    CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), red, green, blue, 1.0);
-    CGContextSetBlendMode(UIGraphicsGetCurrentContext(),kCGBlendModeNormal);
-    
-    CGContextStrokePath(UIGraphicsGetCurrentContext());
-    self->tempDrawImage.image = UIGraphicsGetImageFromCurrentImageContext();
-    [self->tempDrawImage setAlpha:opacity];
-    UIGraphicsEndImageContext();
-    
-    lastPoint = currentPoint;
-}
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    if(!mouseSwiped) {
-        UIGraphicsBeginImageContext(self.view.frame.size);
-        [self->tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        CGContextSetLineCap(UIGraphicsGetCurrentContext(), kCGLineCapRound);
-        CGContextSetLineWidth(UIGraphicsGetCurrentContext(), brush);
-        CGContextSetRGBStrokeColor(UIGraphicsGetCurrentContext(), red, green, blue, opacity);
-        CGContextMoveToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-        CGContextAddLineToPoint(UIGraphicsGetCurrentContext(), lastPoint.x, lastPoint.y);
-        CGContextStrokePath(UIGraphicsGetCurrentContext());
-        CGContextFlush(UIGraphicsGetCurrentContext());
-        self->tempDrawImage.image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-    }
-    
-    UIGraphicsBeginImageContext(self->mainImage.frame.size);
-    [self->mainImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:1.0];
-    [self->tempDrawImage.image drawInRect:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) blendMode:kCGBlendModeNormal alpha:opacity];
-    self->mainImage.image = UIGraphicsGetImageFromCurrentImageContext();
-    self->tempDrawImage.image = nil;
-    UIGraphicsEndImageContext();
-}
-*/
 
 - (IBAction)reset:(id)sender {
     
@@ -248,9 +201,13 @@
     NSString *name = [NSString stringWithFormat:@"John"];
     
     
-    NSData *img = [NSData dataWithData:UIImagePNGRepresentation(self->mainImage.image)];
-    
-    
+    //NSData *img = [NSData dataWithData:UIImagePNGRepresentation(self->mainImage.image)];
+    //Take a 'screen' shot of the drawing canvas
+    UIGraphicsBeginImageContext(self.canvas.frame.size);
+    [[self.canvas layer] renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    NSData *img =[NSData dataWithData:UIImagePNGRepresentation(screenshot)];
     [Database saveDrawingWithImage:img];
     //Do something here with the drawings
     //NSMutableArray *drawings = [Database fetchAllDrawings];

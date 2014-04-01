@@ -10,6 +10,7 @@
 		92F2E19A18E433A300DF9F0F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F2E19918E433A300DF9F0F /* Parse.framework */; };
 		92F2E19D18E446DB00DF9F0F /* SmoothLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F2E19C18E446DB00DF9F0F /* SmoothLineView.m */; };
 		92F2E1A218E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92F2E1A018E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib */; };
+		92FE776018E7AAF4001A49E1 /* noun_project_347_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92FE775F18E7AAF4001A49E1 /* noun_project_347_2.png */; };
 		BC7FDFC418BD140B00AA3CB5 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7FDFC318BD140B00AA3CB5 /* Database.m */; };
 		BC7FDFC618BD144C00AA3CB5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */; };
 		DA48D0CA18BFE4B5005D8A1A /* Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DA48D0C918BFE4B5005D8A1A /* Drawing.m */; };
@@ -88,6 +89,7 @@
 		92F2E19E18E44B2600DF9F0F /* Smooth_Line_ViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Smooth_Line_ViewViewController.h; sourceTree = "<group>"; };
 		92F2E19F18E44B3E00DF9F0F /* Smooth_Line_ViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Smooth_Line_ViewViewController.m; sourceTree = "<group>"; };
 		92F2E1A018E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Smooth_Line_ViewViewController.xib; sourceTree = "<group>"; };
+		92FE775F18E7AAF4001A49E1 /* noun_project_347_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noun_project_347_2.png; sourceTree = "<group>"; };
 		BC7FDFC218BD140B00AA3CB5 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		BC7FDFC318BD140B00AA3CB5 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -229,6 +231,7 @@
 		DA5F691418BC4F820082AAA3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				92FE775F18E7AAF4001A49E1 /* noun_project_347_2.png */,
 				DA48D0CD18C13A64005D8A1A /* Database.sql */,
 				DA5F691518BC4F820082AAA3 /* QuickDraw-Info.plist */,
 				DA5F691618BC4F820082AAA3 /* InfoPlist.strings */,
@@ -345,6 +348,7 @@
 				DA5F692218BC4F820082AAA3 /* Default@2x.png in Resources */,
 				DA5F692418BC4F820082AAA3 /* Default-568h@2x.png in Resources */,
 				DA5F692718BC4F820082AAA3 /* MainStoryboard.storyboard in Resources */,
+				92FE776018E7AAF4001A49E1 /* noun_project_347_2.png in Resources */,
 				92F2E1A218E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib in Resources */,
 				DA48D0CE18C13A64005D8A1A /* Database.sql in Resources */,
 			);
