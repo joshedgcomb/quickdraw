@@ -23,15 +23,25 @@ c00000000531F22BE0000000000003EEB
 t1394549438
 s16107
 
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/Smooth_Line_ViewViewController.xib
+c0000000053164E420000000000000916
+t1393970754
+s2326
+
 N/Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/en.lproj/InfoPlist.strings
 c00000000531F22BE000000000000002D
 t1394549438
 s45
 
 N/Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/en.lproj/MainStoryboard.storyboard
-c00000000531F22BE0000000000002A8A
-t1394549438
-s10890
+c00000000533DE8480000000000002AF0
+t1396566088
+s10992
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/noun_project_347_2.png
+c0000000053164AD60000000000000B5A
+t1393969878
+s2906
 
 N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app
 t2
@@ -61,11 +71,19 @@ N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Res
 t2
 s0
 
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/Smooth_Line_ViewViewController.nib
+t2
+s0
+
 N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/en.lproj/InfoPlist.strings
 t2
 s0
 
 N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/en.lproj/MainStoryboard.storyboard
+t2
+s0
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/noun_project_347_2.png
 t2
 s0
 
@@ -76,7 +94,13 @@ s1293
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies417587621#417587621#0(63"[BEROR]error: There is no SDK with the name or path 'iphoneos'1(4@55"error: There is no SDK with the name or path 'iphoneos'417587621#18446744073709551615#0#0(1@0"0(0#1#0"17199582976#0"0#
+lSLF07#2@18"Check dependencies418259195#418259195#0(258"[BEROR]error: There is no SDK with the name or path 'iphoneos'[BWARN]Code Sign warning: code-signing identity 'iPhone Developer' matches multiple identities : 'iPhone Developer', 'iPhone Developer: Mimee Xu (7GLD685L6R)' -- 'iPhone Developer' will be used.2(4@55"error: There is no SDK with the name or path 'iphoneos'418259195#18446744073709551615#0#0(1@0"0(22@187"Code Sign warning: code-signing identity 'iPhone Developer' matches multiple identities : 'iPhone Developer', 'iPhone Developer: Mimee Xu (7GLD685L6R)' -- 'iPhone Developer' will be used.418259195#18446744073709551615#0#0(1@0"0(0#1#0"17204765440#0"0#
+
+CCodeSign /Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app
+r0
+
+CCompileXIB /Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/Smooth_Line_ViewViewController.xib
+r0
 
 CCopyStringsFile /Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/en.lproj/InfoPlist.strings QuickDraw/en.lproj/InfoPlist.strings
 r0
@@ -94,6 +118,9 @@ CCpResource build/Debug/QuickDraw.app/Contents/Resources/Default@2x.png QuickDra
 r0
 
 CCpResource build/Debug/QuickDraw.app/Contents/Resources/en.lproj/MainStoryboard.storyboard QuickDraw/en.lproj/MainStoryboard.storyboard
+r0
+
+CCpResource build/Debug/QuickDraw.app/Contents/Resources/noun_project_347_2.png QuickDraw/noun_project_347_2.png
 r0
 
 CProcessInfoPlistFile /Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Info.plist QuickDraw/QuickDraw-Info.plist

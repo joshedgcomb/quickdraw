@@ -15,14 +15,15 @@
 IBOutlet UIImageView *mainImage;
 IBOutlet UIImageView *tempDrawImage;
 
-    
-CGPoint lastPoint;
-CGFloat red;
-CGFloat green;
-CGFloat blue;
-CGFloat brush;
-CGFloat opacity;
-BOOL mouseSwiped;
+//CGPoint lastPoint;
+//CGFloat red;
+//CGFloat green;
+//CGFloat blue;
+//CGFloat brush;
+//CGFloat opacity;
+//BOOL mouseSwiped;
 }
+-(int)compareDrawings:(NSData *)firstImg andSecondImage:(NSData *) secondImg;
+
 
 @end

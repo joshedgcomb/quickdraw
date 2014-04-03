@@ -33,14 +33,17 @@
 
 @implementation GameViewController
 
+/* Possible \todos in the future:
+ *
+ * Different colours:
+ * red = 0.0/255.0;
+ * green = 0.0/255.0;
+ * blue = 0.0/255.0;
+ * brush = 10.0;
+ * opacity = 1.0;
+ */
 - (void)viewDidLoad
 {
-    red = 0.0/255.0;
-    green = 0.0/255.0;
-    blue = 0.0/255.0;
-    brush = 10.0;
-    opacity = 1.0;
-    
     //Smoothline View
     
     //SmoothLineView * smoothLineView =[[SmoothLineView alloc] initWithFrame:self.view.frame ];
@@ -101,8 +104,7 @@
     self.penLayer.hidden = YES;
 }
 
-/*Drawings */
-
+/*Animations */
 - (void) setupDrawingLayer
 {
     if (self.pathLayer != nil) {
@@ -157,7 +159,6 @@
 
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    //END OF added stuff
     [self.canvas clear];
 }
 /* end of smoothline drawing stuff */
@@ -168,19 +169,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
-    mouseSwiped = NO;
-    UITouch *touch = [touches anyObject];
-    lastPoint = [touch locationInView:self.view];
-}
 
-
-- (IBAction)reset:(id)sender {
-    
-    //self->mainImage.image = nil;//old code
-    
-    
+- (IBAction)reset:(id)sender {    
     //clear for smoothlineview
     for (UIView *subView in self.view.subviews)
     {
@@ -194,14 +184,9 @@
     
 }
 
-//- (IBAction)done:(id)sender {
+// Similar to IBAction done, which is called by pressing 'done', practically
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    int num = arc4random() % 100;
-    NSNumber *score = [NSNumber numberWithInt:num];
-    NSString *name = [NSString stringWithFormat:@"John"];
-    
-    
-    //NSData *img = [NSData dataWithData:UIImagePNGRepresentation(self->mainImage.image)];
+    //Save the current drawing in database
     //Take a 'screen' shot of the drawing canvas
     UIGraphicsBeginImageContext(self.canvas.frame.size);
     [[self.canvas layer] renderInContext:UIGraphicsGetCurrentContext()];
@@ -209,23 +194,34 @@
     UIGraphicsEndImageContext();
     NSData *img =[NSData dataWithData:UIImagePNGRepresentation(screenshot)];
     [Database saveDrawingWithImage:img];
+    
+    NSData * copy = [NSData dataWithData:img];
+    
     //Do something here with the drawings
     //NSMutableArray *drawings = [Database fetchAllDrawings];
     /*for (Drawing *temp in drawings){
       //  NSLog(@"From DB: %d", temp.rowid);
     }*/ //Suspected debugging code
 
+    //New object in tableview
+    int num = [self compareDrawings:img andSecondImage: copy];
+    NSNumber *score = [NSNumber numberWithInt:num];
+    NSString *name = [NSString stringWithFormat:@"John"];
     
     PFObject *highScore = [PFObject objectWithClassName:@"NewScore"];
     highScore[@"name"] = name;
     highScore[@"score"] = score;
     [highScore saveInBackground];
-    
 
 }
 
-
-/*
-- (IBAction)replay:(id)sender {
-}*/
+-(int)compareDrawings:(NSData *)firstImg andSecondImage:(NSData *) secondImg{
+    
+    /*
+     int num = arc4random() % 100;
+     NSNumber *score = [NSNumber numberWithInt:num];
+     */
+    
+    return 1;
+}
 @end
