@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DA5F692F18BC4F820082AAA3"
-               BuildableName = "QuickDrawTests.octest"
+               BuildableName = "QuickDrawTests.xctest"
                BlueprintName = "QuickDrawTests"
                ReferencedContainer = "container:QuickDraw.xcodeproj">
             </BuildableReference>
@@ -54,7 +54,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">

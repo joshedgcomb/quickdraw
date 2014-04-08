@@ -16,6 +16,8 @@
 //From original smoothlineviewvc
 @property (nonatomic) SmoothLineView * canvas;
 @property (atomic) NSMutableArray *storedPath;
+@property (weak, nonatomic) IBOutlet UILabel *timerDisplay;
+@property (weak, nonatomic) IBOutlet UIProgressView *timerBar;
 
 
 //Added stuff below:
@@ -31,10 +33,21 @@
 
 @end
 
-@implementation GameViewController
+@implementation GameViewController{
+    bool timerRunning;
+}
 
 - (void)viewDidLoad
 {
+    
+    self->timer = [NSTimer scheduledTimerWithTimeInterval:0.05
+                   target:self selector:@selector(onTick)
+                   userInfo:NULL repeats:YES];
+    self.timerBar.progress = 0;
+    self->startTime = [NSDate timeIntervalSinceReferenceDate];
+    //int seconds = [NSDate timeIntervalSinceReferenceDate] - startTime;
+    //self.timerDisplay.text = [NSString stringWithFormat:@"%u", seconds];
+    
     red = 0.0/255.0;
     green = 0.0/255.0;
     blue = 0.0/255.0;
@@ -57,6 +70,20 @@
     [self.view addSubview:smoothLineView];
     [super viewDidLoad];
 
+}
+
+
+// updates the timer on the screen
+- (void) onTick {
+    double currentTime = [NSDate timeIntervalSinceReferenceDate];
+    int totalHundredths = (currentTime - startTime) * 100;
+    int seconds = currentTime - startTime;
+    int hundredths = totalHundredths%100;
+    
+    self.timerBar.progress = 1 - (currentTime - startTime)/10.0;
+    self->lastTime = currentTime;
+    
+    self.timerDisplay.text = [NSString stringWithFormat:@"%u:%02u", seconds, hundredths];
 }
 /* Button action for clear & replay */
 - (IBAction)replay:(UIButton *)sender {
