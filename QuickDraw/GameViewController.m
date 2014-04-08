@@ -27,7 +27,6 @@
 @property (nonatomic, retain) CALayer *penLayer;
 //end of added stuff
 
-
 - (IBAction)replay:(id)sender;
 
 
@@ -40,6 +39,7 @@
 - (void)viewDidLoad
 {
     
+    self->name = @"";
     self->timer = [NSTimer scheduledTimerWithTimeInterval:0.05
                    target:self selector:@selector(onTick)
                    userInfo:NULL repeats:YES];
@@ -221,11 +221,33 @@
     
 }
 
+// delegate function to get text from alert view
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+
+    self->name = [alertView textFieldAtIndex:0].text;
+    int num = 21000;
+    NSNumber *score = [NSNumber numberWithInt:num];
+    PFObject *highScore = [PFObject objectWithClassName:@"NewScore"];
+    highScore[@"name"] = self->name;
+    highScore[@"score"] = score;
+    [highScore saveInBackground];
+    
+    
+    // name contains the entered value
+}
+
 //- (IBAction)done:(id)sender {
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    int num = arc4random() % 100;
-    NSNumber *score = [NSNumber numberWithInt:num];
-    NSString *name = [NSString stringWithFormat:@"John"];
+    UIAlertView* getName = [[UIAlertView alloc] initWithTitle:@"High score!"
+                            message:@"Please enter your name." delegate:self cancelButtonTitle:@"OK"
+                            otherButtonTitles:nil];
+    getName.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField * nameTextField = [getName textFieldAtIndex:0];
+    nameTextField.keyboardType = UIKeyboardTypeNumberPad;
+    nameTextField.placeholder = @"Your name here";
+    
+    [getName show];
     
     
     //NSData *img = [NSData dataWithData:UIImagePNGRepresentation(self->mainImage.image)];
@@ -242,11 +264,7 @@
       //  NSLog(@"From DB: %d", temp.rowid);
     }*/ //Suspected debugging code
 
-    
-    PFObject *highScore = [PFObject objectWithClassName:@"NewScore"];
-    highScore[@"name"] = name;
-    highScore[@"score"] = score;
-    [highScore saveInBackground];
+
     
 
 }

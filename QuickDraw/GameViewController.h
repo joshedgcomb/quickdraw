@@ -28,6 +28,7 @@
     NSDate *startDate;
     double startTime;
     int lastTime;
+    NSString* name;
     
 
 

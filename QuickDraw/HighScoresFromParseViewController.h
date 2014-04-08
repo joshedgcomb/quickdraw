@@ -8,6 +8,8 @@
 
 #import <Parse/Parse.h>
 
-@interface HighScoresFromParseViewController : PFQueryTableViewController
+@interface HighScoresFromParseViewController : PFQueryTableViewController   {
+    int currentPlace;
+}
 
 @end

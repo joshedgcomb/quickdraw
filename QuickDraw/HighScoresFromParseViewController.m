@@ -45,6 +45,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self->currentPlace = 1;
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -141,9 +142,16 @@
     }
     
     // Configure the cell
-    cell.textLabel.text = [object objectForKey:@"name"];
+    //NSString* placeString = [NSString stringWithFormat:@"%i. ", self->currentPlace];
+    NSString* nameString = [object objectForKey:@"name"];
+    //NSString* fullString = @"";
+    //fullString = [fullString stringByAppendingString:placeString];
+    //fullString = [fullString stringByAppendingString:nameString];
+    cell.textLabel.text = nameString;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Score: %@", [object objectForKey:@"score"]];
-    
+    cell.textLabel.font = [UIFont systemFontOfSize:36];
+    cell.detailTextLabel.font = [UIFont systemFontOfSize:36];
+    //self->currentPlace += 1;
     return cell;
 }
 
