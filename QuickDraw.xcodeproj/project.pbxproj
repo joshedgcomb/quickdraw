@@ -13,6 +13,8 @@
 		92FE776018E7AAF4001A49E1 /* noun_project_347_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 92FE775F18E7AAF4001A49E1 /* noun_project_347_2.png */; };
 		BC7FDFC418BD140B00AA3CB5 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7FDFC318BD140B00AA3CB5 /* Database.m */; };
 		BC7FDFC618BD144C00AA3CB5 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */; };
+		DA0D86E218FD12AC008B5819 /* StartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0D86E118FD12AC008B5819 /* StartingViewController.m */; };
+		DA0D871418FDA5DA008B5819 /* iphone_settings_view.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0D871318FDA5D9008B5819 /* iphone_settings_view.xib */; };
 		DA48D0CA18BFE4B5005D8A1A /* Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = DA48D0C918BFE4B5005D8A1A /* Drawing.m */; };
 		DA48D0CE18C13A64005D8A1A /* Database.sql in Resources */ = {isa = PBXBuildFile; fileRef = DA48D0CD18C13A64005D8A1A /* Database.sql */; };
 		DA48D0D818C3FB5A005D8A1A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0D718C3FB5A005D8A1A /* AudioToolbox.framework */; };
@@ -93,6 +95,9 @@
 		BC7FDFC218BD140B00AA3CB5 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		BC7FDFC318BD140B00AA3CB5 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 		BC7FDFC518BD144C00AA3CB5 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		DA0D86E018FD12AC008B5819 /* StartingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartingViewController.h; sourceTree = "<group>"; };
+		DA0D86E118FD12AC008B5819 /* StartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartingViewController.m; sourceTree = "<group>"; };
+		DA0D871318FDA5D9008B5819 /* iphone_settings_view.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = iphone_settings_view.xib; sourceTree = "<group>"; };
 		DA48D0C818BFE4B5005D8A1A /* Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawing.h; sourceTree = "<group>"; };
 		DA48D0C918BFE4B5005D8A1A /* Drawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Drawing.m; sourceTree = "<group>"; };
 		DA48D0CD18C13A64005D8A1A /* Database.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Database.sql; sourceTree = "<group>"; };
@@ -210,6 +215,8 @@
 				DA5F691C18BC4F820082AAA3 /* AppDelegate.h */,
 				DA5F691D18BC4F820082AAA3 /* AppDelegate.m */,
 				DA5F692518BC4F820082AAA3 /* MainStoryboard.storyboard */,
+				DA0D86E018FD12AC008B5819 /* StartingViewController.h */,
+				DA0D86E118FD12AC008B5819 /* StartingViewController.m */,
 				DA5F692818BC4F820082AAA3 /* GameViewController.h */,
 				DA5F692918BC4F820082AAA3 /* GameViewController.m */,
 				92F2E19F18E44B3E00DF9F0F /* Smooth_Line_ViewViewController.m */,
@@ -235,6 +242,7 @@
 				DA48D0CD18C13A64005D8A1A /* Database.sql */,
 				DA5F691518BC4F820082AAA3 /* QuickDraw-Info.plist */,
 				DA5F691618BC4F820082AAA3 /* InfoPlist.strings */,
+				DA0D871318FDA5D9008B5819 /* iphone_settings_view.xib */,
 				DA5F691918BC4F820082AAA3 /* main.m */,
 				DA5F691B18BC4F820082AAA3 /* QuickDraw-Prefix.pch */,
 				DA5F691F18BC4F820082AAA3 /* Default.png */,
@@ -344,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5F691818BC4F820082AAA3 /* InfoPlist.strings in Resources */,
+				DA0D871418FDA5DA008B5819 /* iphone_settings_view.xib in Resources */,
 				DA5F692018BC4F820082AAA3 /* Default.png in Resources */,
 				DA5F692218BC4F820082AAA3 /* Default@2x.png in Resources */,
 				DA5F692418BC4F820082AAA3 /* Default-568h@2x.png in Resources */,
@@ -391,6 +400,7 @@
 				DA48D13B18C6451A005D8A1A /* HighScoresFromParseViewController.m in Sources */,
 				DA48D0CA18BFE4B5005D8A1A /* Drawing.m in Sources */,
 				BC7FDFC418BD140B00AA3CB5 /* Database.m in Sources */,
+				DA0D86E218FD12AC008B5819 /* StartingViewController.m in Sources */,
 				DA5F692A18BC4F820082AAA3 /* GameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

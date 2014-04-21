@@ -1,36 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Starting View Controller-->
         <scene sceneID="4">
             <objects>
-                <viewController id="2" sceneMemberID="viewController">
+                <viewController id="2" customClass="StartingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MzZ-Ka-7zl">
-                                <rect key="frame" x="249" y="406" width="271" height="191"/>
+                                <rect key="frame" x="230" y="552" width="309" height="191"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
-                                <state key="normal" title="Play!">
+                                <state key="normal" title="Time Attack!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ap9-eC-mWu" kind="modal" id="XXe-DV-prw"/>
+                                    <segue destination="Ap9-eC-mWu" kind="modal" identifier="startToDrawSegue" id="XXe-DV-prw"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QuickDraw" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sJ6-hx-Oal">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ore-dA-R5A">
+                                <rect key="frame" x="249" y="613" width="271" height="191"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <state key="normal" title="Free Draw">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ap9-eC-mWu" kind="modal" identifier="freeDrawSegue" id="Grn-xn-DSO"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QuickDraw!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sJ6-hx-Oal">
                                 <rect key="frame" x="162" y="20" width="444" height="229"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="85"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NSu-Qn-qSM">
-                                <rect key="frame" x="211" y="544" width="347" height="53"/>
+                                <rect key="frame" x="211" y="751" width="347" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <state key="normal" title="High Scores">
@@ -40,13 +50,22 @@
                                     <segue destination="ofE-us-46P" kind="modal" id="k1J-NO-TSm"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" id="hqb-gK-lE0">
+                                <rect key="frame" x="249" y="316" width="268" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextBox" destination="hqb-gK-lE0" id="JNT-v3-xBq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-47" y="-236"/>
+            <point key="canvasLocation" x="-203" y="-444"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="X0P-NF-dBJ">
@@ -56,6 +75,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <navigationBar contentMode="scaleToFill" id="FKx-9B-Gmw">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="x8g-8p-XNS">
+                                        <barButtonItem key="rightBarButtonItem" title="Settings" id="HvC-hi-1iH">
+                                            <connections>
+                                                <action selector="callToggleSettingsView:" destination="Ap9-eC-mWu" id="ozB-4V-eeu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="1" progressImage="Default.png" trackImage="noun_project_347_2.png" id="PLz-dC-bwN">
                                 <rect key="frame" x="217" y="196" width="328" height="3"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -68,7 +100,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ofE-us-46P" kind="modal" id="WfS-Xx-aGn"/>
+                                    <segue destination="ofE-us-46P" kind="modal" id="Yow-kZ-AhJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Draw!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lup-Gb-LFM">
@@ -115,6 +147,7 @@
                     </view>
                     <connections>
                         <outlet property="mainImage" destination="cIc-3v-Xuf" id="kgQ-0P-g7W"/>
+                        <outlet property="settingsButton" destination="HvC-hi-1iH" id="dGt-gp-WBQ"/>
                         <outlet property="tempDrawImage" destination="E90-LW-YxX" id="2Xv-9O-N8T"/>
                         <outlet property="timerBar" destination="PLz-dC-bwN" id="IWI-c1-Gor"/>
                         <outlet property="timerDisplay" destination="8Lx-Ie-TZn" id="04b-dE-cX2"/>
@@ -168,7 +201,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuD-pK-Z8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="938" y="-155"/>
+            <point key="canvasLocation" x="1062" y="345"/>
         </scene>
     </scenes>
     <resources>
@@ -182,5 +215,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="k1J-NO-TSm"/>
+        <segue reference="Grn-xn-DSO"/>
     </inferredMetricsTieBreakers>
 </document>

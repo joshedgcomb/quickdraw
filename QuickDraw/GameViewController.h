@@ -28,7 +28,6 @@
     NSDate *startDate;
     double startTime;
     int lastTime;
-    NSString* name;
     
 
 
@@ -36,6 +35,11 @@
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *stopwatchLabel;
+@property NSString *highScoreName;
+@property int mode;
+@property float red;
+@property float blue;
+@property float green;
 
 - (IBAction)startTimer:(id)sender;
 - (IBAction)stopTimer:(id)sender;

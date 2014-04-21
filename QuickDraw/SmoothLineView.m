@@ -29,7 +29,7 @@
 #import "SmoothLineView.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define DEFAULT_COLOR               [UIColor blackColor]
+#define DEFAULT_COLOR               [UIColor redColor]
 #define DEFAULT_WIDTH               5.0f
 #define DEFAULT_BACKGROUND_COLOR    [UIColor whiteColor]
 
