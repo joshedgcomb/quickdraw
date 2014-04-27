@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import "Database.h"
+#import "Smooth_Line_ViewViewController.h"
 
 @interface GameViewController : UIViewController{
 
     IBOutlet UIImageView *mainImage;
     IBOutlet UIImageView *tempDrawImage;
 
+    SmoothLineView * smoothLineView;
     
     CGPoint lastPoint;
     CGFloat red;
@@ -28,6 +30,7 @@
     NSDate *startDate;
     double startTime;
     int lastTime;
+    NSString* name;
     
 
 
@@ -35,11 +38,8 @@
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *stopwatchLabel;
-@property NSString *highScoreName;
-@property int mode;
-@property float red;
-@property float blue;
-@property float green;
+
+- (IBAction)saveDrawing:(id)sender;
 
 - (IBAction)startTimer:(id)sender;
 - (IBAction)stopTimer:(id)sender;
