@@ -8,7 +8,9 @@
 
 #import "HighScoresFromParseViewController.h"
 
-@implementation HighScoresFromParseViewController
+@implementation HighScoresFromParseViewController{
+    
+}
 
 
 // Changed from initWithStyle, since when using storyboards, initWithCoder
@@ -45,7 +47,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self->currentPlace = 1;
+    self->currentPlace = 0;
+    [[UIApplication sharedApplication] setStatusBarHidden:YES
+                                            withAnimation:UIStatusBarAnimationFade];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -147,13 +151,14 @@
     //NSString* fullString = @"";
     //fullString = [fullString stringByAppendingString:placeString];
     //fullString = [fullString stringByAppendingString:nameString];
+    cell.backgroundColor = [UIColor colorWithWhite:0.1535 alpha:1.0];
     cell.textLabel.text = nameString;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Score: %@", [object objectForKey:@"score"]];
-    cell.textLabel.font = [UIFont systemFontOfSize:36];
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:36];
+    cell.textLabel.font = [UIFont fontWithName:@"Futura" size:36];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"Futura" size:36];
+    
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.detailTextLabel.textColor = [UIColor whiteColor];
-    //self->currentPlace += 1;
     return cell;
 }
 
@@ -230,6 +235,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 
