@@ -1,0 +1,104 @@
+TQuickDraw
+v7
+r1
+cCheck dependencies
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/Database.sql
+c00000000531F22BE0000000000000000
+t1394549438
+s0
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/Default-568h@2x.png
+c00000000531F22BE00000000000048A2
+t1394549438
+s18594
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/Default.png
+c00000000531F22BE000000000000198C
+t1394549438
+s6540
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/Default@2x.png
+c00000000531F22BE0000000000003EEB
+t1394549438
+s16107
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/en.lproj/InfoPlist.strings
+c00000000531F22BE000000000000002D
+t1394549438
+s45
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/QuickDraw/en.lproj/MainStoryboard.storyboard
+c00000000531F22BE0000000000002A8A
+t1394549438
+s10890
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app
+t2
+s0
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Info.plist
+t2
+s0
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/Database.sql
+t2
+s0
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/Default-568h@2x.png
+t2
+s0
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/Default.png
+t2
+s0
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/Default@2x.png
+t2
+s0
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/en.lproj/MainStoryboard.storyboard
+t2
+s0
+
+NQuickDraw/QuickDraw-Info.plist
+c00000000531F22BE000000000000050D
+t1394549438
+s1293
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies417587621#417587621#0(63"[BEROR]error: There is no SDK with the name or path 'iphoneos'1(4@55"error: There is no SDK with the name or path 'iphoneos'417587621#18446744073709551615#0#0(1@0"0(0#1#0"17199582976#0"0#
+
+CCopyStringsFile /Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Resources/en.lproj/InfoPlist.strings QuickDraw/en.lproj/InfoPlist.strings
+r0
+
+CCpResource build/Debug/QuickDraw.app/Contents/Resources/Database.sql QuickDraw/Database.sql
+r0
+
+CCpResource build/Debug/QuickDraw.app/Contents/Resources/Default-568h@2x.png QuickDraw/Default-568h@2x.png
+r0
+
+CCpResource build/Debug/QuickDraw.app/Contents/Resources/Default.png QuickDraw/Default.png
+r0
+
+CCpResource build/Debug/QuickDraw.app/Contents/Resources/Default@2x.png QuickDraw/Default@2x.png
+r0
+
+CCpResource build/Debug/QuickDraw.app/Contents/Resources/en.lproj/MainStoryboard.storyboard QuickDraw/en.lproj/MainStoryboard.storyboard
+r0
+
+CProcessInfoPlistFile /Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app/Contents/Info.plist QuickDraw/QuickDraw-Info.plist
+r0
+
+CTouch /Users/xinleixu/Desktop/Zimmer/quickdraw/build/Debug/QuickDraw.app
+r0
+

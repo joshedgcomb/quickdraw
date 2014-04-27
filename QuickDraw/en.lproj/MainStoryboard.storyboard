@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Starting View Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="StartingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MzZ-Ka-7zl">
+                                <rect key="frame" x="249" y="547" width="271" height="84"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <state key="normal" title="Play!">
+                                    <color key="titleColor" red="0.59999999999999998" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="83E-jB-FdJ" kind="modal" identifier="startGame" id="Kze-zn-Qvh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="QuickDraw" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sJ6-hx-Oal">
+                                <rect key="frame" x="162" y="20" width="444" height="229"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="85"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NSu-Qn-qSM">
+                                <rect key="frame" x="211" y="742" width="347" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <state key="normal" title="High Scores">
+                                    <color key="titleColor" red="1" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ofE-us-46P" kind="modal" id="k1J-NO-TSm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7yx-HO-5Ic">
+                                <rect key="frame" x="247" y="625" width="275" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <state key="normal" title="Free Draw">
+                                    <color key="titleColor" red="0.20000000000000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ap9-eC-mWu" kind="modal" identifier="freeDraw" id="cXn-Mo-zmY"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="center" minimumFontSize="17" id="LSk-j9-Ms9">
+                                <rect key="frame" x="254" y="318" width="268" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="5" id="edd-Ec-HEw"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="0.15174498180000001" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextBox" destination="LSk-j9-Ms9" id="OVz-20-rPa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="233" y="-1940"/>
+        </scene>
+        <!--Glyph View Controller-->
+        <scene sceneID="KFA-Ho-ehw">
+            <objects>
+                <viewController id="83E-jB-FdJ" customClass="GlyphViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Esf-xX-yfS">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Start drawing" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" id="GAh-89-35d">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="1" progressImage="Default.png" trackImage="noun_project_347_2.png" id="THg-K1-00t">
+                                <rect key="frame" x="220" y="84" width="328" height="3"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0L3-aI-Eo8">
+                                <rect key="frame" x="318" y="962" width="133" height="48"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <state key="normal" title="Next!">
+                                    <color key="titleColor" red="0.59999999999999998" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="donePressed:" destination="83E-jB-FdJ" eventType="touchUpInside" id="Bfc-7t-cI2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.15174498180000001" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblStatus" destination="GAh-89-35d" id="9b1-Zt-lTG"/>
+                        <outlet property="nextButton" destination="0L3-aI-Eo8" id="Qe0-as-xag"/>
+                        <outlet property="timerBar" destination="THg-K1-00t" id="p1r-r5-euz"/>
+                        <segue destination="ofE-us-46P" kind="modal" identifier="toScores" id="SXK-Az-Qa4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZr-hf-AB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1269" y="-847"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="X0P-NF-dBJ">
+            <objects>
+                <viewController id="Ap9-eC-mWu" customClass="GameViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fdq-zS-c7u">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FOF-sw-uPo">
+                                <rect key="frame" x="297" y="951" width="133" height="42"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="1" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2" kind="modal" id="7US-fM-K5f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nr7-iV-1B2">
+                                <rect key="frame" x="108" y="951" width="133" height="42"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.59999999999999998" green="1" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveDrawing:" destination="Ap9-eC-mWu" eventType="touchUpInside" id="bfU-CB-zHX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Draw!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lup-Gb-LFM">
+                                <rect key="frame" x="257" y="20" width="252" height="140"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="85"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FRu-mh-QjA">
+                                <rect key="frame" x="484" y="947" width="138" height="50"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="50"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.20000000000000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="Ap9-eC-mWu" eventType="touchUpInside" id="C1G-Qp-EUV"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UAK-Dz-uyQ">
+                                <rect key="frame" x="546" y="53" width="175" height="74"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <state key="normal" title="Replay">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="replay:" destination="Ap9-eC-mWu" eventType="touchUpInside" id="3U1-5d-KdN"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="E90-LW-YxX" userLabel="tempDrawImage">
+                                <rect key="frame" x="0.0" y="319" width="767" height="612"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="cIc-3v-Xuf" userLabel="mainImage">
+                                <rect key="frame" x="5" y="319" width="768" height="612"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.15174498180000001" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="mainImage" destination="cIc-3v-Xuf" id="kgQ-0P-g7W"/>
+                        <outlet property="tempDrawImage" destination="E90-LW-YxX" id="2Xv-9O-N8T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YKm-KQ-jnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-859" y="-825"/>
+        </scene>
+        <!--High Scores From Parse View Controller-->
+        <scene sceneID="T8X-Oc-YJ8">
+            <objects>
+                <tableViewController id="ofE-us-46P" customClass="HighScoresFromParseViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9pR-yj-rRH">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.15174498180000001" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="115" id="2L6-8t-xuA">
+                                <rect key="frame" x="0.0" y="22" width="768" height="115"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2L6-8t-xuA" id="fxw-hv-00D">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="114"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ofE-us-46P" id="ixe-BW-t9T"/>
+                            <outlet property="delegate" destination="ofE-us-46P" id="F7h-pk-414"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PuD-pK-Z8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="-42"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="noun_project_347_2.png" width="100" height="100"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="SXK-Az-Qa4"/>
+    </inferredMetricsTieBreakers>
+</document>
