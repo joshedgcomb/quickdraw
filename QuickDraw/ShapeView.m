@@ -93,7 +93,7 @@
     //4
     CGContextAddRect(ctx, CGRectMake(center.x - (0.5 * rectangleWidth), center.y - (0.5 * rectangleHeight), rectangleWidth, rectangleHeight));
     CGContextSetLineWidth(ctx, 5);
-    CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:255/255.0 green:153/255.0 blue:255/255.0 alpha:1.0] CGColor]);
+    CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:51/255.0 green:255/255.0 blue:255/255.0 alpha:1.0] CGColor]);
     CGContextStrokePath(ctx);
     
     //5
@@ -107,7 +107,7 @@
     CGPoint center = CGPointMake(self.frame.size.width / 2.0, self.frame.size.height / 2.0);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(ctx, 5);
-    CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:51/255.0 green:255/255.0 blue:255/255.0 alpha:1.0] CGColor]);
+    CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:255/255.0 green:153/255.0 blue:255/255.0 alpha:1.0] CGColor]);
     CGContextBeginPath(ctx);
     
     //6 CGContextSetLineWidth(ctx, 5);
