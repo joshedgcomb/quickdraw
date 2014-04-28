@@ -25,6 +25,8 @@
 		DA48D0E618C3FBAB005D8A1A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0E518C3FBAB005D8A1A /* StoreKit.framework */; };
 		DA48D0E818C3FBB7005D8A1A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA48D0E718C3FBB7005D8A1A /* SystemConfiguration.framework */; };
 		DA48D13B18C6451A005D8A1A /* HighScoresFromParseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA48D13A18C6451A005D8A1A /* HighScoresFromParseViewController.m */; };
+		DA4E8878190DB30300622767 /* rsz_appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = DA4E8876190DB30300622767 /* rsz_appicon.png */; };
+		DA4E8879190DB30300622767 /* rsz_launchpic.png in Resources */ = {isa = PBXBuildFile; fileRef = DA4E8877190DB30300622767 /* rsz_launchpic.png */; };
 		DA51CC5C190B23A6009D389F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA51CC5B190B23A6009D389F /* AVFoundation.framework */; };
 		DA51CC5E190B2AD0009D389F /* Parameter160kbps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DA51CC5D190B2AD0009D389F /* Parameter160kbps.mp3 */; };
 		DA5F690E18BC4F820082AAA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690D18BC4F820082AAA3 /* UIKit.framework */; };
@@ -140,6 +142,8 @@
 		DA48D0E718C3FBB7005D8A1A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		DA48D13918C6451A005D8A1A /* HighScoresFromParseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScoresFromParseViewController.h; sourceTree = "<group>"; };
 		DA48D13A18C6451A005D8A1A /* HighScoresFromParseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScoresFromParseViewController.m; sourceTree = "<group>"; };
+		DA4E8876190DB30300622767 /* rsz_appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_appicon.png; sourceTree = "<group>"; };
+		DA4E8877190DB30300622767 /* rsz_launchpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_launchpic.png; sourceTree = "<group>"; };
 		DA51CC5B190B23A6009D389F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DA51CC5D190B2AD0009D389F /* Parameter160kbps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Parameter160kbps.mp3; sourceTree = "<group>"; };
 		DA5F690A18BC4F820082AAA3 /* QuickDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -327,6 +331,8 @@
 		DA5F691418BC4F820082AAA3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA4E8876190DB30300622767 /* rsz_appicon.png */,
+				DA4E8877190DB30300622767 /* rsz_launchpic.png */,
 				DA51CC5D190B2AD0009D389F /* Parameter160kbps.mp3 */,
 				DAE3BC8218FCE78A000DB4B5 /* Glyphs */,
 				DA48D0CD18C13A64005D8A1A /* Database.sql */,
@@ -531,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA4E8878190DB30300622767 /* rsz_appicon.png in Resources */,
 				DAE3BCCD18FCE8D3000DB4B5 /* N.json in Resources */,
 				DAE3BCC318FCE8D3000DB4B5 /* D.json in Resources */,
 				DAE3BCA418FCE8A6000DB4B5 /* W.json in Resources */,
@@ -539,6 +546,7 @@
 				DA5F691818BC4F820082AAA3 /* InfoPlist.strings in Resources */,
 				DA5F692018BC4F820082AAA3 /* Default.png in Resources */,
 				DA5F692218BC4F820082AAA3 /* Default@2x.png in Resources */,
+				DA4E8879190DB30300622767 /* rsz_launchpic.png in Resources */,
 				DA5F692418BC4F820082AAA3 /* Default-568h@2x.png in Resources */,
 				DAE3BCA218FCE8A6000DB4B5 /* triangle.json in Resources */,
 				DA5F692718BC4F820082AAA3 /* MainStoryboard.storyboard in Resources */,

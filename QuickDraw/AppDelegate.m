@@ -12,6 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    sleep(2.5);
     [Database createEditableCopyOfDatabaseIfNeeded];
     [Database initDatabase];
     [Parse setApplicationId:@"SWxxDoHsytkQF2dyuxJFpvjizxB4prBUtNqw5C6S"

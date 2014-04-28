@@ -99,7 +99,7 @@
   
   NSString *glyphNames = [self.gestureDetectorView getGlyphNamesString];
   if ([glyphNames length] > 0) {
-    NSString *statusText = [NSString stringWithFormat:@"Start drawing!", [self.gestureDetectorView getGlyphNamesString]];
+    NSString *statusText = [NSString stringWithFormat:@"Start Drawing!", [self.gestureDetectorView getGlyphNamesString]];
     self.lblStatus.text = statusText;
   }
 }
@@ -136,7 +136,7 @@
   if(([glyph.name isEqualToString:@"triangle"] && drawCount%3 == 1) ||
     ([glyph.name isEqualToString:@"square"] && drawCount%3 == 2) ||
      ([glyph.name isEqualToString:@"circle"] && drawCount%3 == 0)){
-      statusString = [statusString stringByAppendingFormat:@"You drew a: %@\nScore: %d", glyph.name, (int)(score*self.timerBar.progress*100)];
+      statusString = [statusString stringByAppendingFormat:@"%@ Score: %d", [glyph.name capitalizedString], (int)(score*self.timerBar.progress*100)];
     
     tempScore = (int)(100*score*self.timerBar.progress);
     //NSLog(@"total: %i",totalScore);
