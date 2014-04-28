@@ -8,7 +8,10 @@
 
 #import "HighScoresFromParseViewController.h"
 
-@implementation HighScoresFromParseViewController
+@implementation HighScoresFromParseViewController{
+
+
+}
 
 
 // Changed from initWithStyle, since when using storyboards, initWithCoder
@@ -29,7 +32,7 @@
         //self.title = @"High Scores";
         
         // Whether the built-in pull-to-refresh is enabled
-        self.pullToRefreshEnabled = YES;
+        self.pullToRefreshEnabled = NO;
         
         // Whether the built-in pagination is enabled
         self.paginationEnabled = YES;
@@ -45,7 +48,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self->currentPlace = 1;
+    self->currentPlace = 0;
+    [[UIApplication sharedApplication] setStatusBarHidden:YES
+                                            withAnimation:UIStatusBarAnimationFade];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -147,13 +152,26 @@
     //NSString* fullString = @"";
     //fullString = [fullString stringByAppendingString:placeString];
     //fullString = [fullString stringByAppendingString:nameString];
+    
+    
+    UILabel *subLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,cell.center.y,self.view.frame.size.width - 30,cell.frame.size.height)]; //put in the frame variables you desire
+    subLabel.textAlignment = NSTextAlignmentRight;
+    subLabel.tag = 20;
+    subLabel.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"score"]];
+    subLabel.font = [UIFont fontWithName:@"Futura" size:36];
+    subLabel.textColor = [UIColor colorWithWhite:1.0 alpha:1.0];
+    [cell.contentView addSubview:subLabel];
+    
+    
+    cell.backgroundColor = [UIColor colorWithWhite:0.1535 alpha:1.0];
     cell.textLabel.text = nameString;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Score: %@", [object objectForKey:@"score"]];
-    cell.textLabel.font = [UIFont systemFontOfSize:36];
-    cell.detailTextLabel.font = [UIFont systemFontOfSize:36];
+    cell.textLabel.font = [UIFont fontWithName:@"Futura" size:36];
+    
+    
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.textColor = [UIColor whiteColor];
-    //self->currentPlace += 1;
     return cell;
 }
 
@@ -165,24 +183,29 @@
  }
  */
 
-/*
+
  // Override to customize the look of the cell that allows the user to load the next page of objects.
  // The default implementation is a UITableViewCellStyleDefault cell with simple labels.
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
- static NSString *CellIdentifier = @"NextPage";
+     static NSString *CellIdentifier = @"NextPage";
  
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
  
- if (cell == nil) {
- cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+     if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+     }
+     
+ 
+     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+     cell.textLabel.text = @"Load more scores";
+     cell.textLabel.textAlignment = NSTextAlignmentCenter;
+     cell.textLabel.textColor = [UIColor colorWithRed:255/255.0 green:153/255.0 blue:255/255.0 alpha:1.0];
+     cell.textLabel.font = [UIFont fontWithName:@"Futura" size:36.0];
+     cell.backgroundColor = [UIColor colorWithWhite:0.1535 alpha:1.0];
+ 
+     return cell;
  }
- 
- cell.selectionStyle = UITableViewCellSelectionStyleNone;
- cell.textLabel.text = @"Load more...";
- 
- return cell;
- }
- */
+
 
 #pragma mark - Table view data source
 
@@ -230,6 +253,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [super tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 

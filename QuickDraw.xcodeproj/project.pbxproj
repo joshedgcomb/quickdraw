@@ -44,6 +44,10 @@
 		DA5F693418BC4F820082AAA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5F690F18BC4F820082AAA3 /* Foundation.framework */; };
 		DA5F693C18BC4F820082AAA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA5F693A18BC4F820082AAA3 /* InfoPlist.strings */; };
 		DA5F693F18BC4F820082AAA3 /* QuickDrawTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F693E18BC4F820082AAA3 /* QuickDrawTests.m */; };
+		DAACF8F7190E12A600FE7EA0 /* high2.png in Resources */ = {isa = PBXBuildFile; fileRef = DAACF8F5190E12A600FE7EA0 /* high2.png */; };
+		DAACF8F8190E12A600FE7EA0 /* mute8.png in Resources */ = {isa = PBXBuildFile; fileRef = DAACF8F6190E12A600FE7EA0 /* mute8.png */; };
+		DAACF8FB190E17EC00FE7EA0 /* mute-64.png in Resources */ = {isa = PBXBuildFile; fileRef = DAACF8F9190E17EC00FE7EA0 /* mute-64.png */; };
+		DAACF8FC190E17EC00FE7EA0 /* volume-up-64.png in Resources */ = {isa = PBXBuildFile; fileRef = DAACF8FA190E17EC00FE7EA0 /* volume-up-64.png */; };
 		DAE3BC8018FCE748000DB4B5 /* GlyphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BC7D18FCE748000DB4B5 /* GlyphViewController.m */; };
 		DAE3BC8118FCE748000DB4B5 /* WTMGlyphDetectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BC7F18FCE748000DB4B5 /* WTMGlyphDetectorView.m */; };
 		DAE3BC9318FCE87C000DB4B5 /* WTMDetectionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE3BC8418FCE87C000DB4B5 /* WTMDetectionResult.m */; };
@@ -167,6 +171,10 @@
 		DA5F693B18BC4F820082AAA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA5F693D18BC4F820082AAA3 /* QuickDrawTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickDrawTests.h; sourceTree = "<group>"; };
 		DA5F693E18BC4F820082AAA3 /* QuickDrawTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickDrawTests.m; sourceTree = "<group>"; };
+		DAACF8F5190E12A600FE7EA0 /* high2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = high2.png; sourceTree = "<group>"; };
+		DAACF8F6190E12A600FE7EA0 /* mute8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mute8.png; sourceTree = "<group>"; };
+		DAACF8F9190E17EC00FE7EA0 /* mute-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mute-64.png"; sourceTree = "<group>"; };
+		DAACF8FA190E17EC00FE7EA0 /* volume-up-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "volume-up-64.png"; sourceTree = "<group>"; };
 		DAE3BC7C18FCE748000DB4B5 /* GlyphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlyphViewController.h; sourceTree = "<group>"; };
 		DAE3BC7D18FCE748000DB4B5 /* GlyphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlyphViewController.m; sourceTree = "<group>"; };
 		DAE3BC7E18FCE748000DB4B5 /* WTMGlyphDetectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTMGlyphDetectorView.h; sourceTree = "<group>"; };
@@ -306,6 +314,9 @@
 				DA5F691C18BC4F820082AAA3 /* AppDelegate.h */,
 				DA5F691D18BC4F820082AAA3 /* AppDelegate.m */,
 				DA5F692518BC4F820082AAA3 /* MainStoryboard.storyboard */,
+				DAACF8F9190E17EC00FE7EA0 /* mute-64.png */,
+				DAACF8FA190E17EC00FE7EA0 /* volume-up-64.png */,
+				DAACF8F4190E12A600FE7EA0 /* Flaticon_PNGFiles */,
 				DAE3BCD41905AC0D000DB4B5 /* StartingViewController.h */,
 				DAE3BCD51905AC0D000DB4B5 /* StartingViewController.m */,
 				DA5F692818BC4F820082AAA3 /* GameViewController.h */,
@@ -364,6 +375,16 @@
 				DA5F693A18BC4F820082AAA3 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAACF8F4190E12A600FE7EA0 /* Flaticon_PNGFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DAACF8F5190E12A600FE7EA0 /* high2.png */,
+				DAACF8F6190E12A600FE7EA0 /* mute8.png */,
+			);
+			name = Flaticon_PNGFiles;
+			path = ../../../Downloads/Flaticon_PNGFiles;
 			sourceTree = "<group>";
 		};
 		DAE3BC8218FCE78A000DB4B5 /* Glyphs */ = {
@@ -550,13 +571,17 @@
 				DA5F692418BC4F820082AAA3 /* Default-568h@2x.png in Resources */,
 				DAE3BCA218FCE8A6000DB4B5 /* triangle.json in Resources */,
 				DA5F692718BC4F820082AAA3 /* MainStoryboard.storyboard in Resources */,
+				DAACF8F8190E12A600FE7EA0 /* mute8.png in Resources */,
 				92FE776018E7AAF4001A49E1 /* noun_project_347_2.png in Resources */,
 				DAE3BCA318FCE8A6000DB4B5 /* V.json in Resources */,
 				92F2E1A218E44B3E00DF9F0F /* Smooth_Line_ViewViewController.xib in Resources */,
 				DAE3BCA118FCE8A6000DB4B5 /* square.json in Resources */,
 				DAE3BCD018FCE8D3000DB4B5 /* T.json in Resources */,
+				DAACF8F7190E12A600FE7EA0 /* high2.png in Resources */,
+				DAACF8FC190E17EC00FE7EA0 /* volume-up-64.png in Resources */,
 				DAE3BCCF18FCE8D3000DB4B5 /* P.json in Resources */,
 				DA48D0CE18C13A64005D8A1A /* Database.sql in Resources */,
+				DAACF8FB190E17EC00FE7EA0 /* mute-64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

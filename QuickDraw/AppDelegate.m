@@ -23,7 +23,7 @@
     NSURL *musicUrl = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Parameter160kbps.mp3", [[NSBundle mainBundle] resourcePath]]];
     _myAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: musicUrl error:nil];
     _myAudioPlayer.numberOfLoops = -1;
-    //[_myAudioPlayer play];
+    [_myAudioPlayer play];
     
     
     

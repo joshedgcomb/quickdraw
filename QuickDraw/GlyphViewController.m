@@ -70,14 +70,22 @@
     //[self.view sendSubviewToBack:shape];
     
     // Change button color to match shape color
+    UIColor *currentColor;
     if (drawCount%3 ==0)    {
-        [self.nextButton setTitleColor:[UIColor colorWithRed:153/255.0 green:255/255.0 blue:153/255.0 alpha:1.0] forState:UIControlStateNormal];
+        currentColor = [UIColor colorWithRed:153/255.0 green:255/255.0 blue:153/255.0 alpha:1.0];
+        [self.nextButton setTitleColor:currentColor forState:UIControlStateNormal];
+        self.timerBar.progressTintColor = currentColor;
+        
     }
     else if (drawCount %3 ==1) {
-        [self.nextButton setTitleColor:[UIColor colorWithRed:255/255.0 green:153/255.0 blue:255/255.0 alpha:1.0] forState:UIControlStateNormal];
+        currentColor = [UIColor colorWithRed:51/255.0 green:255/255.0 blue:255/255.0 alpha:1.0];
+        [self.nextButton setTitleColor:currentColor forState:UIControlStateNormal];
+        self.timerBar.progressTintColor = currentColor;
     }
     else    {
-        [self.nextButton setTitleColor:[UIColor colorWithRed:51/255.0 green:255/255.0 blue:255/255.0 alpha:1.0] forState:UIControlStateNormal];
+        currentColor = [UIColor colorWithRed:255/255.0 green:153/255.0 blue:255/255.0 alpha:1.0];
+        [self.nextButton setTitleColor:currentColor forState:UIControlStateNormal];
+        self.timerBar.progressTintColor = currentColor;
         
     }
     drawCount++;

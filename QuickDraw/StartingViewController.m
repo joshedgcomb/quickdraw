@@ -9,8 +9,11 @@
 #import "StartingViewController.h"
 #import "GameViewController.h"
 #import "GlyphViewController.h"
+#import "AppDelegate.h"
 
 @interface StartingViewController ()
+
+@property AppDelegate *myDelegate;
 
 @end
 
@@ -31,7 +34,9 @@
 {
     [super viewDidLoad];
     nameTextBox.delegate = self;
+    self.muteBool = false;
 	// Do any additional setup after loading the view.
+    self.myDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,6 +62,21 @@
     }
     else if ([segue.identifier isEqualToString:@"freeDraw"]) {
         GameViewController *controller = [segue destinationViewController];
+    }
+}
+- (IBAction)muteButtonPressed:(id)sender {
+    if (self.muteBool == false)  {
+        UIImage *theImage = [UIImage imageNamed:@"mute-64.png"];
+        [sender setImage:theImage forState:UIControlStateNormal];
+        self.muteBool = true;
+        [self.myDelegate.myAudioPlayer setVolume:0.0];
+        
+    }
+    else    {
+        UIImage *theImage = [UIImage imageNamed:@"volume-up-64.png"];
+        [sender setImage:theImage forState:UIControlStateNormal];
+        self.muteBool = false;
+        [self.myDelegate.myAudioPlayer setVolume:1.0];
     }
 }
 

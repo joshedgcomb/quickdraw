@@ -12,6 +12,8 @@
     
     __weak IBOutlet UITextField *nameTextBox;
     
+    __weak IBOutlet UIButton *muteButton;
 }
+@property bool *muteBool;
 
 @end
