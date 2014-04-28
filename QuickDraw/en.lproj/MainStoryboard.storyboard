@@ -63,10 +63,21 @@
                                     <outlet property="delegate" destination="5" id="edd-Ec-HEw"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9xH-v1-Mmf">
+                                <rect key="frame" x="680" y="32" width="47" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="volume-up-64.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="muteButtonPressed:" destination="2" eventType="touchUpInside" id="fxJ-CC-7VZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.15174498180000001" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="muteButton" destination="9xH-v1-Mmf" id="NlU-Yb-GVd"/>
                         <outlet property="nameTextBox" destination="LSk-j9-Ms9" id="OVz-20-rPa"/>
                     </connections>
                 </viewController>
@@ -266,6 +277,7 @@
     <resources>
         <image name="Default.png" width="320" height="480"/>
         <image name="noun_project_347_2.png" width="100" height="100"/>
+        <image name="volume-up-64.png" width="64" height="64"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
