@@ -32,6 +32,8 @@
     self.timerBar.progress = 0;
     self->startTime = [NSDate timeIntervalSinceReferenceDate];
     
+     statusString = @"";
+    
     drawCount = 0;
     totalScore = 0;
     
@@ -135,8 +137,9 @@
   if (score < GESTURE_SCORE_THRESHOLD)
     return;
   
-  NSString *statusString = @"";
+ statusString = @"";
   
+    
   //NSString *glyphNames = [self.gestureDetectorView getGlyphNamesString];
   //if ([glyphNames length] > 0)
     //statusString = [statusString stringByAppendingFormat:@"Loaded with %@ templates.\n\n", glyphNames];
@@ -149,7 +152,30 @@
     tempScore = (int)(100*score*self.timerBar.progress);
     //NSLog(@"total: %i",totalScore);
       self.lblStatus.text = statusString;
-
+    
+      
+      if (drawCount <= 5){
+          self.nextRound.hidden = FALSE;
+          self.nextRound.text = [NSString stringWithFormat:(@"%@", statusString)];
+          [self.view bringSubviewToFront:self.nextRound];
+          
+          double delayInSeconds = 2.0;
+          dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+          dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+              self.nextRound.hidden = TRUE;
+              [self drawNext];
+              totalScore = totalScore +tempScore;
+              self.timerBar.progress = 0;
+              self->startTime = [NSDate timeIntervalSinceReferenceDate];
+          });
+          
+          
+      }
+      else{
+          [self performSegueWithIdentifier:@"toScores" sender:self];
+      }
+      
+      
   }
   else{
       statusString = [statusString stringByAppendingFormat:@"Wrong shape! Try Again"];
@@ -173,10 +199,21 @@
 
 - (IBAction)donePressed:(id)sender {
     if (drawCount <= 5){
-    [self drawNext];
-        totalScore = totalScore +tempScore;
-    self.timerBar.progress = 0;
-    self->startTime = [NSDate timeIntervalSinceReferenceDate];
+        self.nextRound.hidden = FALSE;
+        self.nextRound.text = [NSString stringWithFormat:(@"%@", statusString)];
+        [self.view bringSubviewToFront:self.nextRound];
+        
+        double delayInSeconds = 2.0;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            self.nextRound.hidden = TRUE;
+            [self drawNext];
+            totalScore = totalScore +tempScore;
+            self.timerBar.progress = 0;
+            self->startTime = [NSDate timeIntervalSinceReferenceDate];
+        });
+        
+        
     }
     else{
         [self performSegueWithIdentifier:@"toScores" sender:sender];

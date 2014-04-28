@@ -21,11 +21,15 @@
     int totalScore;
     int tempScore;
     ShapeView *shape;
+    NSString *statusString;
 }
 
 @property (weak, nonatomic) IBOutlet UIProgressView *timerBar;
+
 @property NSString *highScoreName;
 
 - (IBAction)donePressed:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UILabel *nextRound;
 
 @end
