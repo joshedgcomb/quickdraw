@@ -20,6 +20,7 @@
     int drawCount;
     int totalScore;
     int tempScore;
+    bool gameOver;
     ShapeView *shape;
     NSString *statusString;
 }

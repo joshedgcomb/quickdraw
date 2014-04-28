@@ -26,13 +26,30 @@
   [super viewDidLoad];
     
     self->name = @"";
-    self->timer = [NSTimer scheduledTimerWithTimeInterval:0.05
-                                                   target:self selector:@selector(onTick)
-                                                 userInfo:NULL repeats:YES];
-    self.timerBar.progress = 0;
-    self->startTime = [NSDate timeIntervalSinceReferenceDate];
+    gameOver = FALSE;
     
-     statusString = @"";
+    statusString = @"";
+    [self.view bringSubviewToFront:self.nextRound];
+    
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        self.nextRound.hidden = TRUE;
+        [self drawNext];
+        self.gestureDetectorView = [[WTMGlyphDetectorView alloc] initWithFrame: CGRectMake(0, 100, 768, 850)];
+        self.gestureDetectorView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        self.gestureDetectorView.delegate = self;
+        [self.gestureDetectorView loadTemplatesWithNames:@"circle", @"square", @"triangle", nil];
+        [self.view addSubview:self.gestureDetectorView];
+        [self.view bringSubviewToFront:self.gestureDetectorView];
+        
+        self->timer = [NSTimer scheduledTimerWithTimeInterval:0.05
+                                                       target:self selector:@selector(onTick)
+                                                     userInfo:NULL repeats:YES];
+        self.timerBar.progress = 0;
+        self->startTime = [NSDate timeIntervalSinceReferenceDate];
+    });
+    
     
     drawCount = 0;
     totalScore = 0;
@@ -54,13 +71,7 @@
     shape4.backgroundColor = [UIColor grayColor];
     [self.view addSubview:shape4];
     */
-    [self drawNext];
-    self.gestureDetectorView = [[WTMGlyphDetectorView alloc] initWithFrame: CGRectMake(0, 100, 768, 850)];
-  self.gestureDetectorView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-  self.gestureDetectorView.delegate = self;
-  [self.gestureDetectorView loadTemplatesWithNames:@"circle", @"square", @"triangle", nil];
-  [self.view addSubview:self.gestureDetectorView];
-    [self.view bringSubviewToFront:self.gestureDetectorView];
+
 }
 
 -(void) drawNext{
@@ -96,11 +107,44 @@
 }
 
 - (void) onTick {
+    if (gameOver) {
+        return;
+    }
     double currentTime = [NSDate timeIntervalSinceReferenceDate];
 
     
-    self.timerBar.progress = 1 - (currentTime - startTime)/10.0;
+    self.timerBar.progress = 1 - (currentTime - startTime)/3.75;
     self->lastTime = currentTime;
+    NSLog(@"progress: %f", self.timerBar.progress);
+    if (self.timerBar.progress == 0) {
+      //      NSLog(@"PPROGRESS: %f", self.timerBar.progress);
+        self->startTime = [NSDate timeIntervalSinceReferenceDate];
+        self.timerBar.progress = 1;
+        
+        if (drawCount <= 5){
+            self.nextRound.hidden = FALSE;
+            self.nextRound.text = [NSString stringWithFormat:(@"Score: 0")];
+            [self.view bringSubviewToFront:self.nextRound];
+            tempScore = 0;
+            
+            double delayInSeconds = 2.0;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                self.nextRound.hidden = TRUE;
+                [self drawNext];
+                totalScore = totalScore +tempScore;
+                self.timerBar.progress = 1;
+                self->startTime = [NSDate timeIntervalSinceReferenceDate];
+            });
+            
+            
+        }
+        else{
+            gameOver =TRUE;
+            [self performSegueWithIdentifier:@"toScores" sender:self];
+        }
+    }
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -110,7 +154,7 @@
   NSString *glyphNames = [self.gestureDetectorView getGlyphNamesString];
   if ([glyphNames length] > 0) {
     NSString *statusText = [NSString stringWithFormat:@"Start Drawing!", [self.gestureDetectorView getGlyphNamesString]];
-    self.lblStatus.text = statusText;
+      self.lblStatus.text = statusText;
   }
 }
 
@@ -143,7 +187,7 @@
   //NSString *glyphNames = [self.gestureDetectorView getGlyphNamesString];
   //if ([glyphNames length] > 0)
     //statusString = [statusString stringByAppendingFormat:@"Loaded with %@ templates.\n\n", glyphNames];
-    NSLog(@"glyph: %@\n count %i", glyph.name,drawCount);
+    //NSLog(@"glyph: %@\n count %i", glyph.name,drawCount);
   if(([glyph.name isEqualToString:@"triangle"] && drawCount%3 == 1) ||
     ([glyph.name isEqualToString:@"square"] && drawCount%3 == 2) ||
      ([glyph.name isEqualToString:@"circle"] && drawCount%3 == 0)){
@@ -151,13 +195,15 @@
     
     tempScore = (int)(100*score*self.timerBar.progress);
     //NSLog(@"total: %i",totalScore);
-      self.lblStatus.text = statusString;
+      //self.lblStatus.text = statusString;
     
       
       if (drawCount <= 5){
           self.nextRound.hidden = FALSE;
           self.nextRound.text = [NSString stringWithFormat:(@"%@", statusString)];
           [self.view bringSubviewToFront:self.nextRound];
+          self.timerBar.progress = 1;
+          self->startTime = [NSDate timeIntervalSinceReferenceDate];
           
           double delayInSeconds = 2.0;
           dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
@@ -165,8 +211,9 @@
               self.nextRound.hidden = TRUE;
               [self drawNext];
               totalScore = totalScore +tempScore;
-              self.timerBar.progress = 0;
+              self.timerBar.progress = 1;
               self->startTime = [NSDate timeIntervalSinceReferenceDate];
+
           });
           
           
@@ -177,10 +224,7 @@
       
       
   }
-  else{
-      statusString = [statusString stringByAppendingFormat:@"Wrong shape! Try Again"];
-            self.lblStatus.text = statusString;
-  }
+
 }
 
 
@@ -197,7 +241,7 @@
     
 }
 
-- (IBAction)donePressed:(id)sender {
+/*- (IBAction)donePressed:(id)sender {
     if (drawCount <= 5){
         self.nextRound.hidden = FALSE;
         self.nextRound.text = [NSString stringWithFormat:(@"%@", statusString)];
@@ -218,5 +262,5 @@
     else{
         [self performSegueWithIdentifier:@"toScores" sender:sender];
     }
-}
+}*/
 @end
