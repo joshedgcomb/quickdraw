@@ -32,7 +32,7 @@
         //self.title = @"High Scores";
         
         // Whether the built-in pull-to-refresh is enabled
-        self.pullToRefreshEnabled = NO;
+        self.pullToRefreshEnabled = YES;
         
         // Whether the built-in pagination is enabled
         self.paginationEnabled = YES;
@@ -154,13 +154,13 @@
     //fullString = [fullString stringByAppendingString:nameString];
     
     
-    UILabel *subLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,cell.center.y,self.view.frame.size.width - 30,cell.frame.size.height)]; //put in the frame variables you desire
-    subLabel.textAlignment = NSTextAlignmentRight;
-    subLabel.tag = 20;
-    subLabel.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"score"]];
-    subLabel.font = [UIFont fontWithName:@"Futura" size:36];
-    subLabel.textColor = [UIColor colorWithWhite:1.0 alpha:1.0];
-    [cell.contentView addSubview:subLabel];
+    //UILabel *subLabel = [[UILabel alloc] initWithFrame:CGRectMake(0,cell.center.y,self.view.frame.size.width - 30,cell.frame.size.height)]; //put in the frame variables you desire
+    //subLabel.textAlignment = NSTextAlignmentRight;
+    //subLabel.tag = 20;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"score"]];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"Futura" size:36];
+    cell.detailTextLabel.textColor = [UIColor colorWithWhite:1.0 alpha:1.0];
+    //[cell.contentView addSubview:subLabel];
     
     
     cell.backgroundColor = [UIColor colorWithWhite:0.1535 alpha:1.0];

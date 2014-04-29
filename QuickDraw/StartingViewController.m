@@ -60,9 +60,6 @@
                     NSLog(@"PASSED NAME: %@",controller.highScoreName);
         }
     }
-    else if ([segue.identifier isEqualToString:@"freeDraw"]) {
-        GameViewController *controller = [segue destinationViewController];
-    }
 }
 - (IBAction)muteButtonPressed:(id)sender {
     if (self.muteBool == false)  {

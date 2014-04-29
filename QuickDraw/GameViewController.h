@@ -41,8 +41,4 @@
 
 - (IBAction)saveDrawing:(id)sender;
 
-- (IBAction)startTimer:(id)sender;
-- (IBAction)stopTimer:(id)sender;
-- (void) updateTimer;
-
 @end
