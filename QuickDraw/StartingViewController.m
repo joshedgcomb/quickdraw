@@ -54,10 +54,10 @@
     if ([segue.identifier isEqualToString:@"startGame"])  {
         GlyphViewController *controller = [segue destinationViewController];
         controller.highScoreName = nameTextBox.text;
-        NSLog(@"PLAYER NAME: %@",nameTextBox.text);
+        //NSLog(@"PLAYER NAME: %@",nameTextBox.text);
         if ([nameTextBox.text isEqualToString:@""]) {
             controller.highScoreName = @"Player";
-                    NSLog(@"PASSED NAME: %@",controller.highScoreName);
+          //          NSLog(@"PASSED NAME: %@",controller.highScoreName);
         }
     }
 }

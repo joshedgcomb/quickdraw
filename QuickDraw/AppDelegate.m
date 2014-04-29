@@ -12,6 +12,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    sleep(2.5);
     [Database createEditableCopyOfDatabaseIfNeeded];
     [Database initDatabase];
     [Parse setApplicationId:@"SWxxDoHsytkQF2dyuxJFpvjizxB4prBUtNqw5C6S"
@@ -19,10 +20,10 @@
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
     // Override point for customization after application launch.
-    NSURL *musicUrl = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Parameter160kbps.mp3", [[NSBundle mainBundle] resourcePath]]];
-    _myAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: musicUrl error:nil];
-    _myAudioPlayer.numberOfLoops = -1;
-    [_myAudioPlayer play];
+   // NSURL *musicUrl = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@/Parameter160kbps.mp3", [[NSBundle mainBundle] resourcePath]]];
+   // _myAudioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: musicUrl error:nil];
+   // _myAudioPlayer.numberOfLoops = -1;
+   // [_myAudioPlayer play];
     
     
     
