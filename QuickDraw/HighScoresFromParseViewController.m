@@ -158,14 +158,14 @@
     //subLabel.textAlignment = NSTextAlignmentRight;
     //subLabel.tag = 20;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"score"]];
-    cell.detailTextLabel.font = [UIFont fontWithName:@"Futura" size:36];
+    cell.detailTextLabel.font = [UIFont fontWithName:@"Futura" size:28];
     cell.detailTextLabel.textColor = [UIColor colorWithWhite:1.0 alpha:1.0];
     //[cell.contentView addSubview:subLabel];
     
     
     cell.backgroundColor = [UIColor colorWithWhite:0.1535 alpha:1.0];
     cell.textLabel.text = nameString;
-    cell.textLabel.font = [UIFont fontWithName:@"Futura" size:36];
+    cell.textLabel.font = [UIFont fontWithName:@"Futura" size:32];
     
     
     
